@@ -1,0 +1,18 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\Delta~v$}]\begingroup The free spectral range\nomeqref {0}
+		\nompageref{1}
+  \item [{$\lambda$}]\begingroup The wavelength of light in nanometers\nomeqref {0}
+		\nompageref{1}
+  \item [{$c$}]\begingroup The speed of light\nomeqref {0}
+		\nompageref{1}
+  \item [{$F^*$}]\begingroup The finesse of the resonant cavity\nomeqref {0}
+		\nompageref{1}
+  \item [{$L$}]\begingroup The length of the resonant cavity\nomeqref {0}
+		\nompageref{1}
+  \item [{$R$}]\begingroup The reflectivity of the mirrors\nomeqref {0}
+		\nompageref{1}
+
+\end{thenomenclature}

@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+
+\bibitem{website}
+Instructions for scanning fabry-perot interferometer kit 1, 2013.
+
+\bibitem{fabry-perot}
+CH. Fabry and A.~Perot.
+\newblock On a new form of interferometer.
+\newblock {\em Astrophysical Journal}, 9:87, 1901.
+
+\bibitem{hercher}
+Michael Hercher.
+\newblock The spherical mirror fabry-perot interferometer.
+\newblock {\em Applied Optics}, 7(5):951--966, 1968.
+
+\bibitem{jenkinsnwhite}
+F.~Jenkins and H.~E. White.
+\newblock {\em Fundamentals of Optics}.
+\newblock McGraw Hill, 1950.
+
+\bibitem{reich}
+M.~Reich, R.~Schieder, H.~Clar, and G~Winnewisser.
+\newblock Internally coupled fabry-perot interferometer for high precision
+  wavelength control of tunable diode lasers.
+\newblock {\em Applied Optics}, 25(1):5, 1986.
+
+\bibitem{spectraphysics470}
+Spectra Physics: Laser Instrument Division.
+\newblock {\em Model 470 Interferometer}.
+
+\bibitem{sfpidriver}
+Spectra Physics: Laser Instrument Division.
+\newblock {\em Model 476 Scanning Interferometer Driver}, 1979.
+
+\bibitem{piezo}
+Kenji Uchino.
+\newblock Introduction to piezoelectric actuators and transducers.
+\newblock 25~1, Penn State University, 1986.
+
+\bibitem{optics}
+A.~Zajac and E.~Hecht.
+\newblock {\em Optics}.
+\newblock Pearson Higher Education, 4 edition, 2003.
+
+\end{thebibliography}

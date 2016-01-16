@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0055)http://redlum.xohp.pagesperso-orange.fr/laser/SFPI.html -->
+<html style=""><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Scanning Fabry-Perot Interferometer</title>
+  <meta name="keywords" content="holography, laser diode, mode jumps, SFPI, confocal, scanning, piezo driver,
+ Fabry-Perot, interferometer, gain profile, HeNe, coherence length, 315M, Coherent compass, lexel 88">
+<script type="text/javascript">
+//<![CDATA[
+var gs_d=new Date,DoW=gs_d.getDay();gs_d.setDate(gs_d.getDate()-(DoW+6)%7+3);
+var ms=gs_d.valueOf();gs_d.setMonth(0);gs_d.setDate(4);
+var gs_r=(Math.round((ms-gs_d.valueOf())/6048E5)+1)*gs_d.getFullYear();
+var gs_p = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?"+gs_r+"' type='text/javascript'%3E%3C/script%3E"));
+//]]>
+</script><script src="./Scanning Fabry-Perot Interferometer_files/gs.js" type="text/javascript"></script>
+<style>@-webkit-keyframes popbavwhomndnukibolvmtalxemuowqrvslyvucxr {50% {-webkit-transform:scale(1.2);}100% {-webkit-transform:scale(1);}}@keyframes popbavwhomndnukibolvmtalxemuowqrvslyvucxr {50% {-webkit-transform:scale(1.2);transform:scale(1.2);}100% {-webkit-transform:scale(1);transform:scale(1);}}#bavwhomndnukibolvmtalxemuowqrvslyvucxr{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:solid 2px #fff !important;box-sizing:content-box !important;color:#fff !important;display:block !important;height:auto !important;margin:0 !important;opacity:0.9 !important;padding:7px 10px !important;position:fixed !important;visibility:visible !important;width:auto !important;z-index:2147483647 !important;-webkit-border-radius:5px !important;-webkit-box-shadow:0px 0px 20px #000 !important;-webkit-box-sizing:content-box !important;}.bavwhomndnukibolvmtalxemuowqrvslyvucxr-blocked{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;color:#AAA !important;display:inline !important;text-decoration:line-through !important;}#bavwhomndnukibolvmtalxemuowqrvslyvucxr br{display:block !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#bavwhomndnukibolvmtalxemuowqrvslyvucxr span{background:transparent !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#bavwhomndnukibolvmtalxemuowqrvslyvucxr div{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:0 !important;margin:0 !important;padding:0 !important;width:auto !important;letter-spacing:normal !important;font:13px Arial,Helvetica !important;text-align:left !important;text-shadow:none !important;text-transform:none !important;word-spacing:normal !important;}#bavwhomndnukibolvmtalxemuowqrvslyvucxr a{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;font-weight:normal !important;background:none !important;text-decoration:underline !important;color:#fff !important;}a#bavwhomndnukibolvmtalxemuowqrvslyvucxr-gear{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;text-decoration:none !important;position:absolute !important;display:none !important;font-size:20px !important;width:20px !important;height:20px !important;line-height:20px !important;text-align:center !important;background-color:rgba(255,255,255,.8) !important;background-image:url(chrome-extension://mlomiejdfkolichcflejclcbmpeaniij/data/images/gear.svg) !important;background-size:16px 16px !important;background-position:center center !important;background-repeat:no-repeat !important;text-decoration:none !important;}a#bavwhomndnukibolvmtalxemuowqrvslyvucxr-gear:hover{-webkit-animation-name:popbavwhomndnukibolvmtalxemuowqrvslyvucxr !important;animation-name:popbavwhomndnukibolvmtalxemuowqrvslyvucxr !important;-webkit-animation-duration:0.3s !important;animation-duration:0.3s !important;}#bavwhomndnukibolvmtalxemuowqrvslyvucxr:hover #bavwhomndnukibolvmtalxemuowqrvslyvucxr-gear{text-decoration:none !important;display:inline-block !important;}@media print{#bavwhomndnukibolvmtalxemuowqrvslyvucxr{display:none !important;}}</style></head>
+<body>
+<h1 align="left"> Home-brew Scanning Fabry-Perot Interferometer (SFPI) </h1>
+<p align="center"> </p>
+<p> Return to <a href="http://redlum.xohp.pagesperso-orange.fr/argonlaser.html">home page</a> </p>
+<p><img src="./Scanning Fabry-Perot Interferometer_files/lilspectrum.jpg"><br>
+</p>
+<ul>
+  <li><a href="http://redlum.xohp.pagesperso-orange.fr/laser/SFPI.html#comments">Comments</a> on the construction (old)</li>
+  <li><a href="http://redlum.xohp.pagesperso-orange.fr/laser/SFPI.html#new">New</a> improved design</li>
+  <li>Notes on Spectra Physics dye laser pump<strong> </strong><a href="http://redlum.xohp.pagesperso-orange.fr/laser/SFPI.html#mirrors">mirrors</a>, 
+    comments on <a href="http://redlum.xohp.pagesperso-orange.fr/laser/SFPI.html#piezo">piezo-electric elements</a></li>
+  <li>The <a href="http://redlum.xohp.pagesperso-orange.fr/electronics/circuits/piezodriver.pdf" target="_blank">schematics</a> of
+     the piezo driver</li>
+  <li>For measurements of various lasers, see <a href="http://redlum.xohp.pagesperso-orange.fr/laser/spectra.html">here</a>.</li>
+</ul>
+<hr>
+<p><font size="5">General Remarks</font></p>
+<p> It' interesting and instructive to check the longitudinal mode structure and 
+  coherence length of various lasers, especially for holography use (one of my 
+  long term projects is a high power DPSS ring laser, and it will be important 
+  to know the mode structure). So why not try to build a scanning interferometer. 
+  The idea is simple: make an interferometer with two parallel mirrors, slightly 
+  transparent, and feed the laser from one side and put a photodiode at the other. 
+  One of the mirrors is mounted on a piezo ceramic, and applying a triangle voltage 
+  moves it periodically by a wavelength or so. Then, ideally, one can display 
+  the spectrum on an oscilloscope, where x-axis = ramp voltage, y-axis=photodiode 
+  current. 
+</p><p>Alas, things are in practice by far not that simple - I didn't appreciate before 
+  how rich this story is! For an excellent and detailed discussion see, as usual, 
+  <a href="http://www.repairfaq.org/sam/laserlia.htm#liasfpi" target="_blank">Sam's 
+  LaserFAQ</a>; there is no need to repeat it here. Let's just mention that in 
+  order to have a good resolution ("finesse"), one needs dielectric 
+  mirrors, with 99% or so reflectivity. In order to avoid spurious modes, one 
+  needs a mode degenerate resonator, like a confocal configuration (mirror distance=radius 
+  of curvature "ROC"). For having a useful scan width (free spectral 
+  range, "FSR"), the radius of curvature of the mirrors should be as 
+  small as possible, say a few cm. Such highly curved dielectric mirrors are very 
+  hard to get as surplus, since they are not often used. This makes it difficult 
+  for a hobbyist to build an SFPI in the first place. 
+</p><p>But, as so often, recently eBay came to the rescue, and there were dozens of 
+  highly curved dielectric mirrors available at minimal cost, originally made by Spectra 
+  Physics for dye lasers. I had to get a variety of those, of course, and play 
+  with them. I didn't appreciate beforehand how much fun and insights this would 
+  produce! After a couple of months everything worked more or less as expected, 
+  and the results are shown <a href="http://redlum.xohp.pagesperso-orange.fr/laser/spectra.html">here</a>.. 
+</p><p>Note also that a scanning FP interferometer, while resolving a few Mhz of line width, spans in general only a few 100Mhz and so is most suitable for lasers with mode spacing of this size, ie, for lasers with long cavitites (at least a few tens of centimeters). For shorter cavities, and thus larger mode spacing, the display becomes ambiguous as the modes "wrap around" the display; while one can see whether there are extra modes present or not, it is hard to judge their spacing. Thus for shorter cavities, such as for DPSS laser pointers or laser diodes, a <a href="http://redlum.xohp.pagesperso-orange.fr/laser/gratingOSA.html">grating based</a> optical spectrum analyzer will be more useful for displaying the longitudinal mode spectrum. 
+</p><hr>
+<p><strong><a name="comments"></a></strong><font size="5">Comments on the construction 
+  </font> (old)
+</p><p> 
+</p><ul>
+  <li>The mirrors are all Spectra-Physics dye laser mirrors, which have a ROC 
+    of 43mm or 50mm, just as some of the mirrors used by <a href="http://www.repairfaq.org/sam/laserlia.htm#liasfpi" target="_blank">Sam</a>. 
+    The G3854-001 are made for red wavelengths and have a clear backside with 
+    AR coating. For a confocal resonator, these mirrors give a free spectral range 
+    of c/(4L) = 1.7Ghz. </li>
+  For green and cyan wavelengths, I use G3845-003 and G3845-002, respectively. 
+  These have ROC=50mm and yield an FSR=1.5Ghz. For more details, see <a href="http://redlum.xohp.pagesperso-orange.fr/laser/SFPI.html#mirrors">here</a>. 
+  <br>
+  <li>The distance between the mirrors must indeed be very precisely tuned, down 
+    to a fraction of a mm - some dedicated mechanism is necessary. I used a precision 
+    linear stage for that, but the whole thing was still much too unstable. It 
+    should be more stable than a laser resonator, that is. I needed to rebuild 
+    the setup completely.</li>
+  <li> On the entrance side, there is a tunable focus element from an old spatial 
+    filter. This allows to precisely translate the mirror without spoiling the 
+    orientation. The mirror is otherwise fixed, and adjustment of the optical 
+    axis is done by external mirrors. The other mirror is glued on a ring-shaped 
+    piezo element which is attached to a finely adjustable kinematic mount. All 
+    of this is mounted on a rigid, 30mm thick aluminum bracket, which by itself 
+    is fixed on a very heavy lead brick. There is also a F=200mm lens that focuses 
+    the beam into the cavity.</li>
+  <li>I added a 400um pinhole roughly in the center of the resonator, and put 
+    an iris of ca 1mm diameter before the focusing lens in front of the resonator. 
+    With these is easiest to obtain a nice and clean image of the spectrum. The 
+    lens is much more important than the pinhole, though. The pinhole is finely 
+    adjustable by an old almost broken 3D translation stage.</li>
+  <li>Adjustment is extremely delicate, Sam describes the procedure. Another good 
+    description is <a href="http://hexagon.physics.wisc.edu/research/qc/internal/topticafpi100.pdf" target="_blank">here</a>. 
+    Even with all efforts, the gadget is not too stable. The peaks on the sope 
+    screen stabilize only after a few minutes, and start racing around after I 
+    have touched the resonator briefly (just from the minor amount of heat coming 
+    from the hand); that doesn't make adjustment easy.... Even speaking loud in 
+    the room is immediately visible on the screen. Probably stability can be improved 
+    by replacing the kinematial mount by something more massive. Actively stabilizing 
+    the temperature of the resonator by a TEC controller might also help. But 
+    at any rate, it works well enough for hobby purposes.</li>
+  <li>When the resonator is optimally adjusted, there is an enormous buildup of 
+    power within the resonator (see the left pic below). This is really stunning 
+    as naively, almost all of the incoming laser light gets reflected off the 
+    approx 99% entrance mirror. But that's of course not true - when in resonance, 
+    indeed much more power is transmitted; this is similar to a slightly coupled 
+    LC circuit when in resonance (or more general physics speaking, to a weakly 
+    coupled harmonic oscillator). </li>
+</ul>
+  <p><img src="./Scanning Fabry-Perot Interferometer_files/150-5081_IMG.jpg" width="320"> <img src="./Scanning Fabry-Perot Interferometer_files/SFPI2-1.jpg" width="320"></p>
+
+  
+<p><strong>Left pic:</strong> Lasing without a laser medium ? It almost looks 
+  like that ! <br>
+  Shown is a first test setup on a linear stage, with beam from a 655nm/80mW laser diode.<br>
+  <strong>Right pic</strong>: improved, more stable version</p>
+<p> That's a later version, with an extra pinhole in the resonator that 
+  can be adjusted via a an old 3D stage:</p>
+<p><img src="./Scanning Fabry-Perot Interferometer_files/153-5323_IMG-2.jpg"></p>
+<hr>
+<p><strong><a name="piezo"></a></strong><font size="5">Piezoelectric elements</font></p>
+<ul>
+  <li>The piezo ceramic element that I mainly use is a 10mm dia ring with 5mm 
+    hole, part number <a href="http://search-desc.ebay.com/search/search.dll?sofocus=bs&sbrftog=1&catref=C6&from=R10&satitle=SMD1005T20&sacat=-1%26catref%3DC6&bs=Search&fts=2&sargn=-1%26saslc%3D2&saprclo=&saprchi=&fsop=2&fsoo=2" target="_blank">SMD1005T20 
+    </a>by <a href="http://www.steminc.com/" target="_blank">Steminc</a>, on which 
+    the 7.5mm dia mirror is glued upon (after soldering the leads and blackening 
+    the whole thing). For this, the 20Vpp triangular drive voltage I have from 
+    my Wavetek function generator is not sufficient; I thus needed to build a 
+    voltage booster circuit (the <a href="http://redlum.xohp.pagesperso-orange.fr/electronics/circuits/piezodriver.pdf" target="_blank">circuit</a> 
+    has been inspired by <a href="http://www.elecdesign.com/Articles/Index.cfm?AD=1&ArticleID=3789" target="_blank">this</a> 
+    one). It turned out that for this piezo element, a voltage of approx 700V 
+    is necessary to cover once a full free spectral range.</li>
+  <li>I also use a larger version, part number <a href="http://search-desc.ebay.com/search/search.dll?sofocus=bs&sbrftog=1&catref=C6&from=R10&satitle=SMR2412T80&sacat=-1%26catref%3DC6&bs=Search&fts=2&fsop=2%26fsoo%3D2&coaction=compare&copagenum=1&coentrypage=search&sargn=-1%26saslc%3D2&saprclo=&saprchi=" target="_blank">SMR2412T80</a> 
+    by <a href="http://www.steminc.com/" target="_blank">Steminc</a>, which has 
+    24mm Ext. Diam x 12mm Int. Diam. x 8.0mm. It's more expensive but has at least 
+    twice the responsitivity as the smaller PZT; ca 300V is enough to cover one 
+    free spectral range.</li>
+  <li>As I learned the hard way, piezo elements are temperature sensitive - heating 
+    them above the Curie temperature, which is in the order of 200-300C, they 
+    loose their polarization. So when soldering them to a base plate one should 
+    be very careful, I finally used low temp solder after I realized I had damaged 
+    a few piezo's by heat.</li>
+  <li>As I learned the hard way too, due to the high voltage it is important to 
+    keep a very good isolation between the electrodes - I had managed to get a 
+    little creepage current, then heat build-up and finally sparking due to contamination 
+    by glue or solder raisin, across the inner side of the ring. The resulting 
+    smoke then spoiled the backside of the mirror.</li>
+</ul>
+<hr>
+<p><strong><a name="mirrors"></a></strong><font size="5">Spectra Physics dye laser 
+  pump mirrors</font></p>
+<p>As said, the availability of suitable small-radius dielectric mirrors on eBay 
+  was for me the key to build an SFPI. The <a href="http://search.ebay.com/_W0QQsassZlaserman532QQhtZ-1" target="_blank">seller</a> 
+  still seems to have hundreds of them. Most suitable are the G3854-001 for both 
+  HeNe and 65Xnm laser diodes, because they are output couplers with nice anti-reflection 
+  coating and have more ot less just the right transmission. There are many other 
+  mirrors available, and fortunately Sam maintains a quite extensive <a href="http://www.repairfaq.org/sam/laserioi.htm#ioiclmsp" target="_blank">list</a> 
+  of Spectra Physics part numbers. It turned out that the only small radius mirrors 
+  for green and blue I could get hold of are the types G3845-002 and G3845-003. 
+  The main drawback is that they are HR's and so have a frosted back side - something 
+  with prevents a direct use in a SFPI. I first tried to polish them, to no avail. 
+  On the other hand, index-matching away the frosted side by gluing a small piece 
+  of 1mm thick glass on top of them does work reasonably well! Thanks to "Geso" 
+  for providing a few superb anti-reflex coated glass plates for this purpose. 
+  Using a Dremel diamond cutter wheel I cut out a few small pieces (like 8mm x 
+  8mm) from the plates and carefully glued them on the frosted side of the mirrors 
+  with optical glue - voila, the frostiness disappeared, giving rise to a nice 
+  shiny back side of the dielectric mirror! However, one needs to be very careful 
+  in not trapping some air bubbles or other dirt underneath, which would ruin 
+  the mirror. Effectively, only a small center portion (like 1-2mm dia) will ever 
+  be used, so that's not too tough to keep clean.</p>
+<p>First thing with the retrofitted mirrors in hand was to measure their transmission. 
+  Unfortrunately, the mirrors are not optimal, being HR's means that they tend 
+  to have little transmission. Well, that's at least better than having too much 
+  of it.... Here is a preliminary list of transmission data I measured:</p>
+<table width="100%" border="1" align="center" cellpadding="0">
+  <tbody><tr> 
+    <td width="10%">Mirror</td>
+    <td width="10%" align="center">ROC (mm)</td>
+    <td width="10%" align="center"> 488</td>
+    <td width="10%" align="center">514</td>
+    <td width="10%" align="center">532</td>
+    <td width="10%" align="center">633</td>
+    <td width="10%" align="center">658</td>
+    <td width="10%" align="center">frosted?</td>
+  </tr>
+  <tr> 
+    <td>G3854-001</td>
+    <td align="center">43</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">0.5%</td>
+    <td align="center">0.12%</td>
+    <td align="center">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>G3845-006</td>
+    <td align="center">50</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">&nbsp;</td>
+    <td align="center">0</td>
+    <td align="center">x</td>
+  </tr>
+  <tr> 
+    <td>G3845-002 </td>
+    <td align="center">50</td>
+    <td align="center">0.15%</td>
+    <td align="center">4%</td>
+    <td align="center">60%</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">x</td>
+  </tr>
+  <tr> 
+    <td>G3845-003 </td>
+    <td align="center">50</td>
+    <td align="center">1%</td>
+    <td align="center">0.005%</td>
+    <td align="center">0.025%</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">x</td>
+  </tr>
+</tbody></table>
+<p>Note added: I now used a pair of G3845-003 with index matched backside with 
+  good success at 532nm, see below. <br>
+  It also works for 514nm reasonably well with excellent resolution but with quite 
+  a weak singal; not so for 488nm where the resolution is bad. 
+</p><p>G3845-002 should be perfect for 488nm, but for some unknown reason, it just 
+  marginally works (very weak signal).<br>
+  Works perfectly for 496nm and not at all for 514nm, 532nm.</p>
+<p><img src="./Scanning Fabry-Perot Interferometer_files/SPmirrors.jpg" width="320"><img src="./Scanning Fabry-Perot Interferometer_files/SPmirrorsMounted.jpg" width="320"></p>
+<p><strong>Left pic</strong>, on top: index matched G3845-003 glued on small AR 
+  glass piece, this in itself glued on the piezo element, which itself is soldered 
+  to a small washer, and this is glued onto a 1 inch washer that fits right into 
+  a kinemetical mount. Bottom right: frosted backside of a G3845-006 becomes clear 
+  upon index matching.</p>
+<p><strong>Right pic</strong>: mirror and small piezo mounted in one of Geso's 
+  wonderful mirror mounts. Shown is also a module involving a large size piezo 
+  element, onto which an index-matched G3845-002 mirror is glued.</p> 
+<hr>
+<p><strong><a name="new"></a></strong><font size="5">New improved design (11/09)</font></p>
+<p>My friend geso has sent me an improved design, which consists of the same mirrors and piezo elements described here, but glued onto an invar tube with fixed length (note invar has like 1/20th of the thermal expansion than aluminum). The tube is mounted in an adjustable holder to control tilt. It needs a little cut and try to figure out the proper distance between the mirrors, including of the thickness of the glue, as this needs to be very precise. But once this is done, this gives a very stable and easy to use device which has specs as good as commercial ones (less than 10Mhz resolution).</p>
+<p>Here is a picture:</p>
+<p><img src="./Scanning Fabry-Perot Interferometer_files/geso-SFPI.jpg" width="420" height="315"></p>
+<p>The photodiode sits in the small tube to the left, and at the right we see the entry mirror glued onto the piezo element. Not seen is a FL=200mm focusing lens to the right, as well as an OD4 neutral density filter that suppresses backreflections to the laser. </p>
+<p>In order to use such a high attenuation requires a very sensitive photodiode amplifier, and along the way I designed a dedicated circuit for it:</p>
+<p><img src="./Scanning Fabry-Perot Interferometer_files/SFPI-ampli-1.0.png" width="583" height="365">  <a href="http://redlum.xohp.pagesperso-orange.fr/electronics/circuits/SFPI-det-1.0-18x47.brd"><img src="./Scanning Fabry-Perot Interferometer_files/SFPI-1.0.jpg" width="227" height="93"></a></p>
+<p>It fits into a small shielded housing which takes up little footprint on the table:</p>
+<p><img src="./Scanning Fabry-Perot Interferometer_files/SFPIamp.jpg" width="420" height="315"></p>
+<p>I have some  PCBs left over and can assemble more of those amps for people in need for it.</p>
+<hr>
+  <!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2126032; 
+var sc_invisible=1; 
+var sc_partition=19; 
+var sc_security="ce9d7d8b"; 
+var sc_text=4; 
+</script>
+
+<script type="text/javascript" language="javascript" src="./Scanning Fabry-Perot Interferometer_files/counter.js"></script><noscript>&lt;a href="http://www.statcounter.com/" target="_blank"&gt;&lt;img  src="http://c20.statcounter.com/counter.php?sc_project=2126032&amp;amp;amp;java=0&amp;amp;amp;security=ce9d7d8b&amp;amp;amp;invisible=0" alt="free invisible hit counter" border="0"&gt;&lt;/a&gt; </noscript>
+<!-- End of StatCounter Code -->
+
+<p>Return to <a href="http://redlum.xohp.pagesperso-orange.fr/argonlaser.html">home page</a> </p>
+<p>Vers 1.3 -12/09</p>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof _gstat != "undefined") _gstat.audience('','pagesperso-orange.fr');
+//]]>
+</script>
+ 
+
+<img id="hzDownscaled" style="position: absolute; top: -10000px;"><img id="hzDownscaled" style="position: absolute; top: -10000px;"></body></html>

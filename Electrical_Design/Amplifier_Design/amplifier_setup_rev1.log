@@ -1,0 +1,23 @@
+Circuit: * Z:\Users\aviatorblue\Documents\sFPI\Electrical Design\Amplifier_Design\amplifier_setup_rev1.asc
+
+WARNING: Less than two connections to node N001.  This node is used by R11.
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Oct 07 19:53:20 2015
+Total elapsed time: 0.070 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1626
+traniter = 1616
+tranpoints = 696
+accept = 586
+rejected = 110
+matrix size = 25
+fillins = 4
+solver = Normal
+Matrix Compiler1: 2.11 KB object code size  1.2/0.7/[0.4]
+Matrix Compiler2: 2.26 KB object code size  0.6/0.8/[0.4]
+
+

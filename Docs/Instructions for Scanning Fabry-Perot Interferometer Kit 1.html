@@ -1,0 +1,160 @@
+
+<!-- saved from url=(0053)http://repairfaq.cis.upenn.edu/Misc/sale/sfpiins1.htm -->
+<html style=""><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Instructions for Scanning Fabry-Perot Interferometer Kit 1</title>
+</head>
+<body>
+<center>
+<h2>Instructions for Scanning Fabry-Perot Interferometer Kit 1</h2>
+</center>
+
+<h3>Introduction</h3>
+
+HENESFPI1 contains the key components to construct a Scanning Fabry-Perot
+Interferometer suitable for looking at the longitudinal modes of a
+TEM00 red HeNe laser.
+<p>
+The kit includes the following:
+</p><p>
+</p><ul>
+<li><b>Confocal cavity mirrors</b> - Two high quality mirrors:
+<p>
+ </p><ul>
+ <li>S1: 99.5-99.8%@633nm with 40-45mm RoC.
+ </li><li>S2: AR@633nm.
+ </li><li>Diameter: 7.5-8mm.
+ </li></ul>
+<p>
+CAUTION: Mirror coating on highly curved surface is extremely delicate.
+DO NOT TOUCH.  These should be clean, requiring at most to have dust
+blown off with a air bulb.  If cleaning is needed, ONLY use laser mirror
+cleaning techniques!  Warranty does not cover damage to mirror surface!
+I suggest NOT removing the mirrors from the lens tissue until read to
+use.  They are just mirrors! :)
+</p><p>
+</p></li><li><b>PZT disk with center hole</b> - Requires 15-30 V to move through
+ 1 FSR.  A standard function generator can be used as a driver if its
+ p-p voltage is adequate.  Or, construct
+ <a href="http://repairfaq.cis.upenn.edu/Misc/sale/sfpidrv1.gif" class="hoverZoomLink">Scanning Fabry-Perot Interferometer Driver 1</a>.
+ Or, add an amplifier to boost its output.  (A dual op-amp with a +/-15 V
+ swing will produce up to 60 V p-p with the PZT floating, which is way
+ more than enough.  See the schemtic for the driver, above.)
+<p>
+</p></li><li><b>Silicon photodiode</b> - A photodiode with an active
+ area of around 4x8mm.  This can be connected via shielded cable directly
+ to the vertical input of your scope with a 10K ohm load resistor.
+ For initial setup, leave the entire photodiode uncovered.  Once there
+ is a signal, installing an aperture to block all but the centeral 2-3 mm
+ will improve resolution.  For low power lasers, a preamp may be required.
+</li></ul>
+
+<h3>Required Mechanical Components</h3>
+
+A resonant cavity needs to be constructed that can be adjusted precisedly
+between 40 and 45 mm between the surfaces of the mirrors while maintaining
+parallelism with their centers on the same axis.  One of the mirrors must
+be mounted on the PZT while the other
+will be attached to a plate.  One or both mirrors must also be adjustable
+in pan and tilt to align them with respect to each other.  With care, a
+single adjustable mirror is adequate.
+<p>
+The diagram below shows just one example of a suitable design.  This is close
+to the minimal complexity and cost possible using Home-Depot hardware and
+scrap parts.  The other extreme is to use
+Newport or Thorlabs optical breadboard components.  But if
+you can afford those, you may not need to be messing around with this kit!
+</p><p>
+A pair of mounts for 1 inch optics would be best.  Use an adapter (available
+from Thorlabs) to install one of the mirrors in its mount.  Attach this
+to a linear slide on a baseplate with a micrometer adjustment.  Glue the
+other mirror to the PZT center using 3 dabs of 5 Minute Epoxy.  DO NOT USE
+SUPERGLUE!!!!! Once the adhesive has cured, attach the PZT to the other mirror
+mount so it contacts only around its perimeter (to allow the center to move).
+Use an insulating pad and fasteners if it is to electrically float.  Attach
+this mount to the baseplate with a spacer (if needed) so the centers of
+both mounts are precisely in-line.
+</p><p>
+A focusing lens with a focal point roughly in the center of the cavity
+(shown in the diagram but not included in the kit) may improve performance
+under some conditions but is not essential.
+</p><p>
+</p><center>
+<img src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/hbsfpi3.gif">
+</center>
+
+<h3>Initial Adjustments</h3>
+
+The confocal cavity SFPI requires that the mirrors be spaced precisely at
+their RoC, around 43 mm in this case.  So, the resonator must have some
+means of fine adjustment as noted above.  Once the assembly is complete,
+it's time to do "first light" with a laser!  A single longitudinal mode
+(single frequency) laser is best for this as it reduces any ambiguity
+in setting the cavity spacing, but a short normal HeNe (e.g., a JDSU
+1508) red alignment laser can be used.  The mirror spacing (and alignment
+if that is an option) should be set as close to 43 mm as can be done with
+physical measurements.  (I.e.,a machinest's scale and Mark II eyeballs.)
+<p>
+Attach the PZT to your ramp generator and the photodiode with a 1.5K ohm
+load resistor to your scope's vertical input.  (If a proper photodiode
+preamp is available, that's even better!)   Trigger the scope externally
+using a sync signal from the ramp generator, or the ramp if none is available.
+Set up the test laser so it is aimed precisely into the center of the input
+mirror.  (The optional lens should probably not be used at this time as it
+may make things more confusing.)
+</p><p>
+Drive the PZT with a 20 to 30 V p-p ramp (or triangle) at 50 to 100 Hz.
+</p><p>
+With the scope's vertical sensitivity turned up, watch for any signal from
+the photodiode that is syncronized to the ramp.  If your cavity distance
+and mirror alignment were perfect, the result would look similar to the
+photo below.
+</p><p>
+</p><center>
+<a href="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/sfpihds.jpg"><img height="400" src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/sfpihds.jpg" border="0"></a>
+<br>
+<h2>SFPI Display of Melles Griot 05-LHR-151 5 mW HeNe Laser</h2>
+</center>
+<p>
+More likely, the peaks will be smeared out or composed of multiple small
+blips as in the sequence of graphics below. Adjust the spacing of the
+mirrors in small increments <i>Slowly</i>
+and then then let it settle down.  With any movement, the display will
+become quite scrambled, so be patient.  If going one way makes it worse,
+go the other way. :)  If the initial cavity spacing was within about 1 mm
+of being optimal, there should be only one place close by where it resolves
+into a beautiful display like the one above. ;-)
+</p><p>
+</p><center>
+<img src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/cav_p1mm.jpg" border="0">
+<img src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/cav_p.6mm.jpg" border="0">
+<img src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/cav_p.3mm.jpg" border="0">
+<br>
+<img src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/cav_p.15mm.jpg" border="0">
+<img src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/cav_p.075mm.jpg" border="0">
+<img src="./Instructions for Scanning Fabry-Perot Interferometer Kit 1_files/cav_p.0mm.jpg" border="0">
+<br>
+<h2>SFPI Display of SLM Laser as Cavity Length Approaches Optimum Starting from Too Long</h2>
+<h3>(Cavity length error is approximately: +0.5 mm, +0.25 mm, +0.12 mm, +0.06 mm, +0.03 mm, 0 mm)</h3>
+</center>
+<p>
+The entire sequence would represent a length change of a fraction of 1 mm.
+The amplitude of the single peak (in this SLM example) would actually increase
+by a larger amount than shown.  Some of these diagrams are
+from the Toptica SFPI 100 manual, I hope they won't mind. :)
+</p><p>
+Using mirrors identical to the ones in the kit, I've seen a finesse at
+633 nm of 500 or more, though this depends on all the stars aligning
+perfectly. :)  And I can't guarantee that all samples are that good.
+But expect a finesse of several hundred with reasonable care.
+Performance at other wavelengths is not as good but it should still be
+usable to below 594 nm (yellow HeNe) and above 650 nm.
+</p><p>
+For more on SFPIs, see the section:
+<a href="http://repairfaq.cis.upenn.edu/Misc/laserlia.htm#liasfpi">Scanning Fabry-Perot Interferometers</a>
+of "Sam's Lsaer FAQ".
+</p><p>
+<br>
+</p><hr>
+
+
+</body></html>

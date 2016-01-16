@@ -1,0 +1,43 @@
+#################################
+#								#
+#	Ramp Function Generator     #
+#	Stamp Program				#
+#								#
+#################################
+
+
+# Feed into analog ports
+
+start ATD;
+
+# ATD0[0-7] is for Vmax
+# ATD1[0-7] is for frequency
+
+# Measure digital value for Vmax
+ATD0SUM = 0;
+ATD1SUM = 0;
+
+# Take averges of the values
+for x in 0 to 7 {
+	ATD0SUM = ATD0[x] + ATD0SUM;
+	ATD1SUM = ATD1[x] + ATD1SUM;
+} 	
+
+ATD0AVG = ATD0SUM/len(ATD0);
+ATD1AVG = ATD1SUM/len(ATD1);
+
+voltage_attenuation = 
+
+0000 0000
+
+
+
+
+
+
+
+
+
+
+
+

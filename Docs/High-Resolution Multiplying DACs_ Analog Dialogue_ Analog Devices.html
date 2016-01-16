@@ -1,0 +1,715 @@
+﻿<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml">
+<head>
+<title>High-Resolution Multiplying DACs: Analog Dialogue: Analog Devices</title> 
+<meta name="internalTitle" content="High-Resolution Multiplying DACs: Analog Dialogue"> 
+<meta name="keywords" content="mdac, multiplying DAC, AD5450, AD5451, AD5452, AD5453, AD5543"> 
+<meta name="description" content="All digital-to-analog converters (DACs) provide an output proportional to the product of the digitally set gain and an applied reference voltage. A multiplying DAC differs from a fixed-reference DAC in that it can apply a high-resolution digitally set gain to a varying wideband analog signal. ADI’s new resistance-ladder multiplying DACs are inherently suitable for ac signal-processing applications.">
+
+<style type="text/css">
+.navigation {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.arial_12_12 {
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 0;
+	margin-bottom: 12px;
+	font-size: 12pt;
+}
+.title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	font-weight: bold;
+	color: #003399;
+}
+.style2 {
+	font-size: 8pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.right_nav {
+	text-align: right;
+	padding-top: 3px;
+	padding-right: 10px;
+	background-color: #005b95;
+	vertical-align: top;
+}
+.left_nav {
+	text-align: left;
+	padding-top: 3px;
+	padding-left: 10px;
+	background-color: #005b95;
+	vertical-align: top;
+}
+
+.style18 {
+	background-color: #EBF4FF;
+}
+
+.volume {
+	MARGIN-TOP: 24px; FONT-WEIGHT: bold; FONT-SIZE: 14pt; MARGIN-BOTTOM: 6px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.body {
+	MARGIN-TOP: 0px; FONT-SIZE: 14pt; MARGIN-BOTTOM: 12px; FONT-FAMILY: "Times New Roman", Times, serif
+}
+.author {
+	MARGIN-TOP: 12px; FONT-SIZE: 14pt; MARGIN-BOTTOM: 24px; FONT-FAMILY: "Times New Roman", Times, serif
+}
+
+.style19 {
+	font-size: 12pt;
+}
+
+ul
+	{margin-bottom:0in;}
+ li.MsoNormal
+	{margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+}
+
+</style>
+<!-- BEGIN Google Analytics code -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6399754-1']);
+  _gaq.push(['_setDomainName', '.analog.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+<!-- END Google Analytics code -->
+</HEAD>
+ 
+<BODY>
+
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width: 980px">
+  <tr>
+    <td colspan="2">
+	<img alt="Analog Dialogue: A forum for the exchange of circuits, systems, and software for real-world signal processing." src="../../images/AnalogDialogueWebSiteMasthead2009.jpg" width="980" height="114"></td>
+  </tr>    
+  <tr>
+    <td class="left_nav">
+	  <a class="navigation" href="../../index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="navigation" href="http://www.analog.com">Analog Devices</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="navigation" href="../../feedback.html">Feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="navigation" href="../../subscribe.html">Subscribe</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="navigation" href="../../archives.html">Archives</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="navigation" href="../../china/index.html">&#31616;&#20307;&#20013;&#25991;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a class="navigation" href="http://www.analog.com/jp/content/analogdialogue_library_page_new/fca.html">&#26085;&#26412;&#35486;</a>
+	</td>
+
+   <td class="right_nav">
+     <!-- SiteSearch Google --> 
+     <FORM method=GET action="http://www.google.com/search" STYLE="margin: 0px; padding: 0px;">
+	   <INPUT TYPE=hidden name=q value="/library/analogdialogue">
+       <INPUT TYPE=hidden name=domains value="http://www.analog.com">
+       <INPUT TYPE=hidden name=sitesearch value="http://www.analog.com">
+       <INPUT TYPE=text name=q size=20 maxlength=255 value="" style="font-size: 12px;">
+       <INPUT TYPE=submit name=btnG VALUE="Go" style="font-size: 12px;">
+       <a class="navigation" href="../../search.html">Advanced Search</a>
+     </FORM>
+     <!-- SiteSearch Google --> 
+   </td>
+ </tr>
+
+ <tr>
+   <td colspan="2">
+	<img alt="" src="../../images/banner_bottomedge.jpg" width="980" height="8"></td>
+ </tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="7.5" align="center" style="width: 980px; margin-top:10px;">
+
+<tr>
+   <td colspan="2" class="style18">
+
+      <P class=volume style="MARGIN-TOP: 24px"><FONT color=#003399>
+		<a name="return"></a>Volume 44 – September 2010</FONT></P>
+      <P class=body style="MARGIN-TOP: 24px">
+		<IMG height=31 alt=PDF 
+      src="../../images/pdf.gif" 
+      width=28 align=left border=0><a href="mdac.pdf">Download 
+        this article in PDF format. (438KB) </a></P>
+      <P class=title align=left>New High-Resolution Multiplying DACs Excel at 
+        Handling AC Signals</P>
+      <P class=author>By <a href="#author1">Liam Riordan</a></P>
+      <div class=Section1> 
+        <div class=WordSection1> 
+          <p class=body><b>Introduction<br>
+            </b>All 
+            digital-to-analog converters (DACs) provide an output proportional 
+            to the product of the digitally set gain and an applied reference 
+            voltage. A <i>multiplying</i> DAC differs from a <i>fixed-reference</i> 
+            DAC in that it can apply a high-resolution digitally set gain to a 
+            varying wideband analog signal. We discuss here resistance-ladder 
+            multiplying DACs and their inherent suitability for ac signal-processing 
+            applications. </p>
+          <p class=body><b>Basics<br>
+            </b>Since 
+            <a href="http://www.analog.com/library/analogDialogue/cd/vol8n1.pdf">1974</a>, 
+            when Analog Devices introduced the world's first (10-bit) CMOS IC 
+            multiplying DAC, Analog Devices has been a leader in designing and 
+            producing multiplying DACs. Used with an amplifier having appropriate 
+            bandwidth, they employ a switched R-2R ladder and an on-chip feedback 
+            resistor to embody a simple method of adjusting the gain of an ac 
+            or varying dc reference input signal, using the DAC to replace the 
+            input and feedback resistors of a classic inverting op-amp stage (Figure 
+            1). The digitally adjusted resistive ladder, with the on-chip feedback 
+            resistor, provides a gain (<i>D/2<sup class="style19">n</sup></i>) proportional to 
+            the digital input, as if <i>R<sub class="style19">DAC</sub></i> were a variable input 
+            resistor.</p>
+          <p class=body align="center"><img alt="" src="AD44-09_EQ_01.jpg" width="375" height="46"></p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_01.jpg" width="403" height="137"></p>
+          <p class=body align="center"><b>Figure 
+            1. Inverting gain configuration.</b></p>
+          <p class=body>A 
+            burgeoning market has seen several generations of multiplying DACs, 
+            with increased resolution, accuracy, and speed; various digital storage 
+            functions; serial-communication options; reduced size and cost; and 
+            additional DACs per chip. The latest generation of multiplying DACs 
+            offer ideal building blocks for controlling the gain of varying dc 
+            or fast ac voltage signals.</p>
+          <p class=body>The 
+            resistance (R-2R) ladder, used in an op-amp feedback circuit, provides 
+            a digitally controlled current that is translated to an output voltage 
+            by <i>R<sub class="style19">FB</sub></i>. The amplifier provides this output at low 
+            impedance. The <i>reference</i> input has a constant resistance to 
+            ground, equal to <i>R</i>. Figure 2 shows the principle. In Figure 
+            2a, one-half of the source current, <i>V<sub class="style19">REF</sub>/R</i>, is steered 
+            by switch S1 to either I<sub class="style19">OUT1</sub>, connected to the amplifier's 
+            negative input (at virtual ground), or to ground (often called I<sub class="style19">OUT2</sub>). 
+            One-half the remaining current is steered similarly by switch S2 ... 
+            and so on. If the switches are activated by a digital word, <i>D</i> 
+            (S1 is the MSB), the sum of the currents at I<sub class="style19">OUT1</sub>, flowing 
+            through <i>R<sub class="style19">FB</sub></i> (=<i>R</i>), is <i>D </i>&times;<i> 2<sup class="style19">&#150;n 
+            </sup></i>&times;<i> V<sub class="style19">REF</sub>/R</i>. 
+            Important advantages of this configuration include minimization of 
+            transients, because the switches are switching between ground and 
+            virtual ground, and that <i>R<sub class="style19">FB</sub></i> is matched on-chip 
+            to the ladder resistance, with excellent tracking over temperature.</p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_02A_02B.jpg" width="432" height="327"></p>
+          <p class=body align="center"><b>Figure 
+            2. a) R-2R ladder principle. b) multiplying DAC, V<sub class="style19">OUT</sub> = 
+            0 to &#8722;V<sub class="style19">REF</sub>.</b></p>
+          <p class=body>The 
+            range of values given by the digital word, D, depends on the device 
+            used. Here are the ranges of D (first quadrant) for some Analog Devices 
+            multiplying DACs in the AD545x/AD554x families:</p>
+          <div align="center">
+            <table width="28%" border="1" cellspacing="1" cellpadding="1" class="body">
+              <tr> 
+                <td width="53%">8-bit 
+                  AD5450</td>
+                <td width="47%">0 
+                  to 255</td>
+              </tr>
+              <tr> 
+                <td width="53%">10-bit 
+                  AD5451</td>
+                <td width="47%">0 
+                  to 1,023</td>
+              </tr>
+              <tr> 
+                <td width="53%">12-bit 
+                  AD5452</td>
+                <td width="47%">0 
+                  to 4,095</td>
+              </tr>
+              <tr> 
+                <td width="53%">14-bit 
+                  AD5453</td>
+                <td width="47%">0 
+                  to 16,383</td>
+              </tr>
+              <tr> 
+                <td width="53%">16-bit 
+                  AD5543</td>
+                <td width="47%">0 
+                  to 65,535</td>
+              </tr>
+            </table>
+          </div>
+          <p class=body><b>Increasing 
+            the Gain<br>
+            </b>For 
+            applications in which the output voltage must be greater than V<sub class="style19">IN</sub>, 
+            gain can be added by following the DAC stage with an additional external 
+            amplifier; or it can be achieved in a single stage, by simply attenuating 
+            the feedback voltage, as shown in Figure&nbsp;3. The approximation shown 
+            is valid for <i>R</i><sub class="style19">2</sub>||<i>R</i><sub class="style19">3</sub>&lt;&lt;<i>R<sub class="style19">FB</sub></i>. 
+            <i>R</i><sub class="style19">2</sub> and <i>R</i><sub class="style19">3</sub> should have similar 
+            temperature coefficients, but if <i>R</i><sub class="style19">2</sub>||<i>R</i><sub class="style19">3</sub> 
+            is small compared to <i>R<sub class="style19">FB</sub></i>, they need not match the 
+            temperature coefficient of the DAC.</p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_03.jpg" width="462" height="182"></p>
+          <p class=body align="center"><b>Figure 
+            3. Increasing the gain of a multiplying DAC.</b></p>
+          <p class=body><b>Positive 
+            Output<br>
+            </b>To 
+            generate a positive voltage output, an external inverting op amp circuit 
+            can be used to provide an additional inversion of either the input 
+            or the output. Because some multiplying DACs include uncommitted matched 
+            resistors (with tracking temperature coefficients), a positive output 
+            can be obtained simply by connecting an additional op amp (A2 in Figure 
+            4)&#151;which could be the companion op amp within a dual device.</p>
+          <p class=body>If 
+            a differential output is required, two extra op amps are needed. Complete 
+            details can be found in Circuits from the Lab<sup class="style19">®</sup> <nobr>CN-0143,</nobr> 
+            <a href="http://www.analog.com/CN-0143">www.analog.com/CN-0143</a>.</p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_04.jpg" width="498" height="248"></p>
+          <p class=body align="center"><b>Figure 
+            4. Multiplying DAC, V<sub class="style19">OUT</sub> = 0 to V<sub class="style19">REF</sub>. The AD5415, 
+            AD5405, AD5546/AD5556, AD5547/AD5557 include uncommitted resistors 
+            like those shown here.</b></p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_05.jpg" width="619" height="241"></p>
+          <p class=body align="center"><b>Figure 
+            5. Single-ended to differential.</b></p>
+          <p class=body align="left"><b>Stability 
+            Issues<br>
+            </b>An 
+            important component shown in Figure 2 and Figure 3 is the <i>compensation 
+            capacitor</i> (<i>C</i><sub class="style19">1</sub>). The output capacitance of the 
+            ladder, plus the amplifier's input capacitance and any strays, introduces 
+            a pole into the open-loop response&#151;which can cause ringing or 
+            instability when the loop is closed. To compensate for this, an external 
+            feedback capacitor, <i>C</i><sub class="style19">1</sub>, is usually connected in 
+            parallel with the internal <i>R<sub class="style19">FB</sub></i> of the DAC. If the 
+            value of <i>C</i><sub class="style19">1</sub> is too small, it can produce overshoot 
+            or ringing at the output, while too large a value can unduly reduce 
+            the system bandwidth. Since the internal output capacitance of the 
+            DAC varies with code, it is difficult to fix a precise value for <i>C</i><sub class="style19">1</sub>. 
+            The value is best approximated according to the equation:</p>
+          <p class=body align="center"><img alt="" src="AD44-09_EQ_02.jpg" width="177" height="56"></p>
+          <p class=body>where 
+            <i>GBW</i> is the small signal unity-gain bandwidth product of the 
+            op amp and <i>C<sub class="style19">O</sub></i> is the output capacitance of the DAC.</p>
+          <p class=body><b>Key 
+            M-DAC Specifications for Signal Conditioning<br>
+            Multiplying 
+            Bandwidth: 
+            </b>The reference-input frequency at which the gain is 
+            &#150;3 dB. For a given device, it is a function of amplitude and 
+            the choice of compensation capacitance. Figure 6 shows multiplying 
+            bandwidth plots for the AD5544, AD5554, or AD545x current-output DACs, 
+            which can multiply signals up to 12 MHz. The 350-MHz bandwidth of 
+            the accompanying low-power AD8038 op amp ensures that the op amp introduces 
+            insignificant dynamic errors on this scale.</p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_06.jpg" width="351" height="281"></p>
+          <p class=body align="center"><b>Figure 
+            6. Multiplying bandwidth.</b></p>
+          <p class=body><b>Analog 
+            Total Harmonic Distortion (THD): </b>A mathematical representation 
+            of the harmonic content in the multiplied waveform signal. It is approximated 
+            by the log ratio of the rms sum of the first four harmonics (<i>V</i><sub class="style19">2</sub>, 
+            <i>V</i><sub class="style19">3</sub>, <i>V</i><sub class="style19">4</sub>, and <i>V</i><sub class="style19">5</sub>) 
+            of the DAC output to the fundamental value, <i>V</i><sub class="style19">1</sub>, 
+            shown in Figure 7, and given by the equation:</p>
+          <p class=body align="center"><img alt="" src="AD44-09_EQ_03.jpg" width="325" height="59"></p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_07.jpg" width="186" height="147"></p>
+          <p class=body align="center"><b>Figure 
+            7. Harmonic distortion components.</b></p>
+          <p class=body><b>Multiplying 
+            Feedthrough Error: </b>The error due to capacitive feedthrough from 
+            the reference input to the DAC output, when the digital input to the 
+            DAC is all 0s. Ideally with each bit that is dropped, the gain is 
+            reduced by 6 dB, all the way down to the least significant bit, DB0 
+            (Figure 8). However, for the lower bits the capacitive feedthrough 
+            affects the gain at higher frequencies. This can be seen by the flat 
+            lines tailing upwards for the lower bits. For example, at DB2 for 
+            a 14-bit DAC, the ideal gain should be <nobr>&#150;72 dB</nobr> at all frequencies, 
+            but because of feedthrough the actual gain is &#150;66 dB at 1 MHz.</p>
+          <p class=body align="center"><img alt="" src="AD44-09_FIG_08.jpg" width="356" height="277"></p>
+          <p class=body align="center"><b>Figure 
+            8. Multiplying feedthrough error.</b></p>
+          <p class=body><b>Choosing 
+            the Correct Op Amp<br>
+            </b>Multiplying-DAC 
+            circuit performance is strongly dependent on the ability of the selected 
+            op amp to maintain the voltage null at the ladder output and perform 
+            the current-to-voltage conversion. For best dc accuracy, it is important 
+            to select an operational amplifier with low offset voltage and bias 
+            current so as to keep errors commensurate with the DAC's resolution. 
+            Detailed op amp specifications are included in device data sheets.</p>
+          <p class=body>For 
+            applications where the reference input is a relatively high speed 
+            signal, a wide-bandwidth, high-slew-rate op amp is required to avoid 
+            degrading the signal. The gain-bandwidth of an op-amp circuit is limited 
+            by the impedance level of the feedback network and the gain configuration. 
+            To determine what GBW is required, a useful guideline is to select 
+            an op amp with a &#150;3-dB bandwidth that is 10 times the frequency 
+            of the reference signal.</p>
+          <p class=body>The 
+            slew-rate specification of the op amp must be considered in order 
+            to limit distortion of large high-frequency signals. For the AD54xx 
+            and AD55xx families, an op amp with a slew rate of 100 V/&micro;s is generally 
+            sufficient.</p>
+          <p class=body>Table 
+            1 provides a selection of operational amplifiers that are useful for 
+            multiplying applications</p>
+          <p class=body align="center"><b>Table 
+            1. Selection of Sutiable Analog Devices High Speed Op Amps</b></p>
+          <div align="center">
+            <table width="90%" border="1" cellspacing="1" cellpadding="1" class="body">
+              <tr> 
+                <td><b>Part 
+                  Number</b></td>
+                <td> 
+                  <div align="center"><b>Supply 
+                    Voltage<br>
+                    (V)</b></div>
+                </td>
+                <td> 
+                  <div align="center"><b>BW 
+                    (&#150;3-dB)<br>
+                    (MHz)</b></div>
+                </td>
+                <td> 
+                  <div align="center"><b>Slew 
+                    Rate<br>
+                    (V/&micro;s)</b></div>
+                </td>
+                <td> 
+                  <div align="center"><b>V<sub class="style19">OS</sub> 
+                    (Max)<br>
+                    (&micro;V)</b></div>
+                </td>
+                <td> 
+                  <div align="center"><b>I<sub class="style19">B</sub> 
+                    (Max)<br>
+                    (nA)</b></div>
+                </td>
+                <td><b>Package(s)</b></td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/amplifiers-and-comparators/operational-amplifiers-op-amps/ad8065/products/product.html">AD8065</a> </td>
+                <td> 
+                  <div align="center">5 
+                    to 24</div>
+                </td>
+                <td> 
+                  <div align="center">145</div>
+                </td>
+                <td> 
+                  <div align="center">180</div>
+                </td>
+                <td> 
+                  <div align="center">1500</div>
+                </td>
+                <td> 
+                  <div align="center">0.006</div>
+                </td>
+                <td>SOIC-8, 
+                  SOT-23-5</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/amplifiers-and-comparators/operational-amplifiers-op-amps/ad8066/products/product.html">AD8066</a> </td>
+                <td> 
+                  <div align="center">5 
+                    to 24</div>
+                </td>
+                <td> 
+                  <div align="center">145</div>
+                </td>
+                <td> 
+                  <div align="center">180</div>
+                </td>
+                <td> 
+                  <div align="center">1500</div>
+                </td>
+                <td> 
+                  <div align="center">0.006</div>
+                </td>
+                <td>SOIC-8, 
+                  MSOP-8</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/amplifiers-and-comparators/operational-amplifiers-op-amps/ad8021/products/product.html">AD8021</a> </td>
+                <td> 
+                  <div align="center">5 
+                    to 24</div>
+                </td>
+                <td> 
+                  <div align="center">490</div>
+                </td>
+                <td> 
+                  <div align="center">120</div>
+                </td>
+                <td> 
+                  <div align="center">1000</div>
+                </td>
+                <td> 
+                  <div align="center">10,500</div>
+                </td>
+                <td>SOIC-8, 
+                  MSOP-8</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/audiovideo-products/video-ampsbuffersfilters/ad8038/products/product.html">AD8038</a> </td>
+                <td> 
+                  <div align="center">3 to 12</div>
+                </td>
+                <td> 
+                  <div align="center">350</div>
+                </td>
+                <td> 
+                  <div align="center">425</div>
+                </td>
+                <td> 
+                  <div align="center">3000</div>
+                </td>
+                <td> 
+                  <div align="center">750</div>
+                </td>
+                <td>SOIC-8, 
+                  SC70-5</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/amplifiers-and-comparators/operational-amplifiers-op-amps/ada4899-1/products/product.html">ADA4899</a> </td>
+                <td> 
+                  <div align="center">5 
+                    to 12</div>
+                </td>
+                <td> 
+                  <div align="center">600</div>
+                </td>
+                <td> 
+                  <div align="center">310</div>
+                </td>
+                <td> 
+                  <div align="center">35</div>
+                </td>
+                <td> 
+                  <div align="center">100</div>
+                </td>
+                <td>LFCSP-8, 
+                  SOIC-8</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/audiovideo-products/video-ampsbuffersfilters/ad8057/products/product.html">AD8057</a> </td>
+                <td> 
+                  <div align="center">3 
+                    to 12</div>
+                </td>
+                <td> 
+                  <div align="center">325</div>
+                </td>
+                <td> 
+                  <div align="center">1000</div>
+                </td>
+                <td> 
+                  <div align="center">5000</div>
+                </td>
+                <td> 
+                  <div align="center">500</div>
+                </td>
+                <td>SOT-23-5, 
+                  SOIC-8</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/amplifiers-and-comparators/operational-amplifiers-op-amps/ad8058/products/product.html">AD8058</a> </td>
+                <td> 
+                  <div align="center">3 
+                    to 12</div>
+                </td>
+                <td> 
+                  <div align="center">325</div>
+                </td>
+                <td> 
+                  <div align="center">850</div>
+                </td>
+                <td> 
+                  <div align="center">5000</div>
+                </td>
+                <td> 
+                  <div align="center">500</div>
+                </td>
+                <td>SOIC-8, 
+                  MSOP-8</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/amplifiers-and-comparators/operational-amplifiers-op-amps/ad8061/products/product.html">AD8061</a> </td>
+                <td> 
+                  <div align="center">2.7 
+                    to 8</div>
+                </td>
+                <td> 
+                  <div align="center">320</div>
+                </td>
+                <td> 
+                  <div align="center">650</div>
+                </td>
+                <td> 
+                  <div align="center">6000</div>
+                </td>
+                <td> 
+                  <div align="center">350</div>
+                </td>
+                <td>SOT-23-5, 
+                  SOIC-8</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/audiovideo-products/video-ampsbuffersfilters/ad8062/products/product.html">AD8062</a> </td>
+                <td> 
+                  <div align="center">2.7 
+                    to 8</div>
+                </td>
+                <td> 
+                  <div align="center">320</div>
+                </td>
+                <td> 
+                  <div align="center">650</div>
+                </td>
+                <td> 
+                  <div align="center">6000</div>
+                </td>
+                <td> 
+                  <div align="center">350</div>
+                </td>
+                <td>SOIC-8, 
+                  MSOP-8</td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.analog.com/en/amplifiers-and-comparators/operational-amplifiers-op-amps/ad9631/products/product.html">AD9631 
+                  </a> </td>
+                <td> 
+                  <div align="center">&plusmn;3 
+                    to &plusmn;6</div>
+                </td>
+                <td> 
+                  <div align="center">320</div>
+                </td>
+                <td> 
+                  <div align="center">1300</div>
+                </td>
+                <td> 
+                  <div align="center">10,000</div>
+                </td>
+                <td> 
+                  <div align="center">7000</div>
+                </td>
+                <td>SOIC-8, 
+                  PDIP-8</td>
+              </tr>
+            </table>
+            <div class=WordSection1></div>
+          </div>
+          <p class=body><b>Finding 
+            the Right DAC<br>
+            </b>For 
+            a table of digital-to-analog converters, where M-DACs can be found, 
+            visit <a href="http://www.analog.com/en/digital-to-analog-converters/da-converters/products/index.html">www.analog.com/en/digital-to-analog-converters/da-converters/products/index.html</a>.</p>
+          <p class=body><b>Conclusion<br>
+            </b>In 
+            the nearly 40 years of innovation since the introduction of the first 
+            CMOS M-DAC, a number of generations of devices have become available, 
+            with many new features, improved performance, and radical reductions 
+            in cost and size. Among the more recent improvements to our portfolio 
+            of high-resolution 14-bit/16-bit current-output AD55xx DACs are:</p>
+        </div>
+      </div>
+      <ul>
+        <li> 
+          <div class=Section1> 
+            <div class=body>Improved integral nonlinearity (INL), &plusmn;1 LSB</div>
+          </div>
+        </li>
+        <li> 
+          <div class=Section1> 
+            <div class=body>Reduced analog THD and multiplying feedthrough&#151;and wider multiplying 
+              bandwidths</div>
+          </div>
+        </li>
+        <li> 
+          <div class=Section1> 
+            <div class=body>Reduced 
+              THD for digital signals; reduced midscale glitch and digital feedthrough 
+              for variable-reference (dc) applications.</div>
+          </div>
+        </li>
+      </ul>
+      <div class=Section1> 
+        <div class=WordSection1> 
+          <p class=body><b>Further 
+            Reading</b></p>
+        </div>
+      </div>
+      <ol>
+        <li>
+          <div class=Section1>
+            <div class=body>Kester, 
+              Walt, <i>The Data Conversion Handbook</i> (2005) Newnes (Elsevier).</div>
+          </div>
+        </li>
+      </ol>
+      <div class=Section1>
+        <div class=body></div>
+      </div>
+      <div class=Section1></div>
+      <TABLE height=125 cellSpacing=0 cellPadding=0 width="90%" border=0 class="body">
+        <TBODY> 
+        <TR class=body> 
+          <TD colSpan=2 height=34><b>Author</b></TD>
+        </TR>
+        <TR> 
+          <TD width="16%" height=129><img alt="" src="Liam%20Riordan.jpg" width="121" height="151"></TD>
+          <TD class=body width="84%" height=129> 
+            <p class="body"><b><a name=author1></a>Liam 
+              Riordan</b> [<a href="mailto:liam.riordan@analog.com">liam.riordan@analog.com</a>] 
+              joined Analog Devices in 2004 and works in the Precision Converters 
+              Applications Group in Limerick, Ireland. He graduated with a BEng 
+              in electrical and electronic engineering&nbsp;from University College, 
+              Cork.<br>
+              <a 
+            href="#return">(return to top)</a></p>
+          </TD>
+        </TR>
+        </TBODY> 
+      </TABLE>
+
+	<TABLE id=table4 cellSpacing=0 cellPadding=10 width="100%" bgColor=#c0c0c0 
+      border=1>
+		<TBODY>
+			<TR>
+				<TD>
+				<P align=center class="body">&nbsp;<b>Open a Dialogue</b></P>
+				<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 6px" align=center class="body"><b>Question the authors. Share information with your colleagues.</b> 
+                              Leave feedback for the editors. </P>
+				<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 6px" align=center class="body">What did you think of this article? 
+                              Was it useful, timely, well written?</P>
+				<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 6px" align=center class="body">Would you like to see more articles 
+                              on this topic?</P>
+				<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 6px" align=center class="body">
+				<strong>Please leave 
+                              your comments at 
+				</strong><A href="http://analogdiablog.blogspot.com/"><strong>Analog 
+                              Diablog</strong></A>.</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+	<p class="body">&nbsp;</p>
+		
+<p class="arial_12_12">      
+ <a href="#return">
+	<img alt="" src="../../images/top.gif" border="0" width="600" height="21" align="right"></a>
+ <font class="style2">Copyright 1995-<script type="text/javascript" language="javascript">var today = new Date(); document.write(today.getFullYear());</script>
+ <a href="http://www.analog.com/en/corporate/corporate-profile/content/index.html">Analog Devices, Inc.</a> All rights reserved.</font>
+</p>
+	  
+</td>
+</tr>
+</table>
+</body>
+</html>

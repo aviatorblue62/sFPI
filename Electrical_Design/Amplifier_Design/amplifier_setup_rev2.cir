@@ -1,0 +1,34 @@
+* Z:\Users\aviatorblue\Documents\sFPI\Electrical Design\Amplifier_Design\amplifier_setup_rev2.asc
+XU1 0 N011 Vdd Vss N012 LT1001
+XU2 0 N006 Vdd Vss N007 LT1001
+XU3 0 N009 Vdd Vss N010 LT1001
+XU4 0 N008 Vdd Vss Vac LT1001
+R1 N011 N013 10k
+R2 N012 N011 10k
+R3 N006 N012 5k
+R4 N007 N006 10k
+R5 N009 N007 5k
+R6 N010 N009 10k
+R7 N008 N010 10k
+R8 Vac N008 10k
+V1 N013 0 PWL file=sawtooth_current.txt
+V2 Vdd 0 17
+V3 0 Vss 17
+XU5 0 5V Vdd LT1085-5
+R_Arduino 5V 0 10Meg
+XU6 N003 Vdc Vdd LT1086
+R10 N003 Vss 2.6k
+R11 Vdc N003 1.5k
+XU9 0 N002 Vdd Vss Vout LT1001
+XU10 Vac N004 Vdd Vss N004 LT1001
+XU11 Vdc N001 Vdd Vss N001 LT1001
+R19 N002 N001 100k
+R20 N002 N004 100k
+R12 Vout N002 100k
+R13 Vout N005 300
+C1 N005 0 15.51n
+.tran 0 0.01 0
+.lib LT1083.lib
+.lib LTC.lib
+.backanno
+.end

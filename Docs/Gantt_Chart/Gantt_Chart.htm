@@ -1,0 +1,605 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 14">
+<link rel=File-List href="Gantt_Chart_files/filelist.xml">
+<!--[if !mso]>
+<style>
+\:* {behavior:url(#default#VML);}
+\:* {behavior:url(#default#VML);}
+\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-page-orientation:landscape;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:black;
+	font-size:12.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:Normal;
+	mso-style-id:0;}
+td
+	{mso-style-parent:style0;
+	padding:0px;
+	mso-ignore:padding;
+	color:black;
+	font-size:12.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl65
+	{mso-style-parent:style0;
+	mso-number-format:"d\\-mmm";}
+.xl66
+	{mso-style-parent:style0;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#31869B;
+	mso-pattern:black none;}
+.xl67
+	{mso-style-parent:style0;
+	font-size:24.0pt;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	background:#31869B;
+	mso-pattern:black none;}
+.xl68
+	{mso-style-parent:style0;
+	color:windowtext;
+	font-family:"Times New Roman";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:center;}
+.xl69
+	{mso-style-parent:style0;
+	font-family:"Times New Roman";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.xl70
+	{mso-style-parent:style0;
+	font-family:"Times New Roman";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"d\\-mmm";}
+.xl71
+	{mso-style-parent:style0;
+	font-family:"Times New Roman";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:left;
+	padding-left:12px;
+	mso-char-indent-count:1;}
+.xl72
+	{mso-style-parent:style0;
+	font-size:24.0pt;
+	font-family:"Britannic Bold";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	vertical-align:middle;}
+.xl73
+	{mso-style-parent:style0;
+	font-family:"Times New Roman";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:left;}
+.xl74
+	{mso-style-parent:style0;
+	color:windowtext;
+	font-size:24.0pt;
+	font-family:"Britannic Bold";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:none;
+	background:#31869B;
+	mso-pattern:black none;}
+.xl75
+	{mso-style-parent:style0;
+	color:windowtext;
+	font-size:24.0pt;
+	font-family:"Britannic Bold";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#31869B;
+	mso-pattern:black none;}
+.xl76
+	{mso-style-parent:style0;
+	color:windowtext;
+	font-size:24.0pt;
+	font-family:"Britannic Bold";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#31869B;
+	mso-pattern:black none;}
+.xl77
+	{mso-style-parent:style0;
+	color:windowtext;
+	font-size:24.0pt;
+	font-family:"Britannic Bold";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#31869B;
+	mso-pattern:black none;}
+-->
+</style>
+</head>
+
+<body link=blue vlink=purple>
+
+<table border=0 cellpadding=0 cellspacing=0 width=1880 style='border-collapse:
+ collapse;table-layout:fixed;width:1880pt'>
+ <col width=44 style='mso-width-source:userset;mso-width-alt:1877;width:44pt'>
+ <col width=260 style='mso-width-source:userset;mso-width-alt:11093;width:260pt'>
+ <col width=72 style='mso-width-source:userset;mso-width-alt:3072;width:72pt'>
+ <col width=67 style='mso-width-source:userset;mso-width-alt:2858;width:67pt'>
+ <col width=91 style='mso-width-source:userset;mso-width-alt:3882;width:91pt'>
+ <col width=826 style='mso-width-source:userset;mso-width-alt:35242;width:826pt'>
+ <col width=65 style='width:65pt'>
+ <col width=65 style='width:65pt'>
+ <col width=65 span=6 style='width:65pt'>
+ <tr height=15 style='mso-height-source:userset;height:15.0pt'>
+  <td height=15 class=xl66 width=44 style='height:15.0pt;width:44pt'>&nbsp;</td>
+  <td colspan=5 rowspan=2 class=xl74 width=1316 style='border-right:.5pt solid black;
+  border-bottom:.5pt solid black;width:1316pt'>Project Timeline</td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+  <td class=xl72 width=65 style='width:65pt'></td>
+ </tr>
+ <tr height=21 style='mso-height-source:userset;height:21.0pt'>
+  <td height=21 class=xl67 style='height:21.0pt'>&nbsp;</td>
+  <td class=xl72></td>
+  <td class=xl72></td>
+  <td class=xl72></td>
+  <td class=xl72></td>
+  <td class=xl72></td>
+  <td class=xl72></td>
+  <td class=xl72></td>
+  <td class=xl72></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=14 style='height:15.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl68 style='font-size:12.0pt;color:windowtext;font-weight:700;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:1.0pt solid black;border-right:none;
+  border-bottom:1.0pt solid black;border-left:none;background:#4BACC6;
+  mso-pattern:#4BACC6 none'>Task</td>
+  <td class=xl68 style='font-size:12.0pt;color:windowtext;font-weight:700;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:1.0pt solid black;border-right:none;
+  border-bottom:1.0pt solid black;border-left:none;background:#4BACC6;
+  mso-pattern:#4BACC6 none'>Start Date</td>
+  <td class=xl68 style='font-size:12.0pt;color:windowtext;font-weight:700;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:1.0pt solid black;border-right:none;
+  border-bottom:1.0pt solid black;border-left:none;background:#4BACC6;
+  mso-pattern:#4BACC6 none'>End Date</td>
+  <td class=xl68 style='font-size:12.0pt;color:windowtext;font-weight:700;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:1.0pt solid black;border-right:none;
+  border-bottom:1.0pt solid black;border-left:none;background:#4BACC6;
+  mso-pattern:#4BACC6 none'>Duration (days)</td>
+  <td class=xl68 style='font-size:12.0pt;color:windowtext;font-weight:700;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:1.0pt solid black;border-right:none;
+  border-bottom:1.0pt solid black;border-left:none;background:#4BACC6;
+  mso-pattern:#4BACC6 none'>Notes</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>Project
+  Proposal</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>5-Jan</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>20-Mar</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>74</td>
+  <td class=xl71 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>This
+  contains in full the reason behind the project and all of the processes that
+  encompass it.</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69>Documentation</td>
+  <td class=xl70 align=right>16-Jan</td>
+  <td class=xl70 align=right>21-Aug</td>
+  <td class=xl69 align=right>217</td>
+  <td class=xl71>This will a be a process of documenting all intecations and
+  ideas associated with the project</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>Theorical
+  Desiging</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>16-Jan</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>25-Feb</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>40</td>
+  <td class=xl71 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>This
+  entitles the theoretical desiging the entire system from start to finish
+  based on models and diagrams</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69>Testing/Confirming</td>
+  <td class=xl70 align=right>26-Jan</td>
+  <td class=xl70 align=right>20-Mar</td>
+  <td class=xl69 align=right>53</td>
+  <td class=xl71>This ecompasses testing all devices for optimum usage and
+  parts for cofirmation on desired specifcations and proof of concept</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>Applicable
+  Re-Design</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>20-Mar</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>3-Apr</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>14</td>
+  <td class=xl73 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'><span
+  style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>This will comprise of
+  taking the original deisgn and compiling all components into a fluid
+  electrical system cabable accurate and function synthesis.</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69>Simulating</td>
+  <td class=xl70 align=right>27-Mar</td>
+  <td class=xl70 align=right>17-Apr</td>
+  <td class=xl69 align=right>21</td>
+  <td class=xl71>This will ecompass building simulatable computer designs of
+  all modules of the project and simulating their processes to deterime the
+  bevaoir of these systems.</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>Constructing</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>10-Apr</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>1-May</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>21</td>
+  <td class=xl71 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>This
+  will be a process focuses on simply physically constrcuting the protoype of
+  the system for testing and optimization</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69>Testing/Stressing</td>
+  <td class=xl70 align=right>24-Apr</td>
+  <td class=xl70 align=right>8-May</td>
+  <td class=xl69 align=right>14</td>
+  <td class=xl71>This will consist of testing the device and stressing it to
+  its local range of pheseable operation</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>Optimizing</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>1-May</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>22-May</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>21</td>
+  <td class=xl71 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>This
+  will aim at increasing that range of operation so as to make the device more
+  effective and effceint</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69>Reconfiguring</td>
+  <td class=xl70 align=right>15-May</td>
+  <td class=xl70 align=right>29-May</td>
+  <td class=xl69 align=right>14</td>
+  <td class=xl71>This will consist of taking the data from the testing and
+  optimization and compiling it into a configuration which will be designed for
+  implementation and final outcome</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>Implemeting</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>22-May</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>21-Aug</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>91</td>
+  <td class=xl71 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>This
+  will be the process of impelemting the newly configured design with the
+  desired purpose of that device so as to prove effectiveness.</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69>Improving</td>
+  <td class=xl70 align=right>29-May</td>
+  <td class=xl70 align=right>14-Aug</td>
+  <td class=xl69 align=right>77</td>
+  <td class=xl71>This will consist of taking new and improved steps at changing
+  the newly implemented device to imporve functionality as well as user
+  interfacing and precision</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>Finalizing
+  Presention/Documentation</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>29-May</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>21-Aug</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>84</td>
+  <td class=xl71 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";background:#D9D9D9;mso-pattern:#D9D9D9 none'>This
+  is the compliation of all data collected over the period of the project as
+  well as the processies used inroder for presentation as to the projects
+  effectivness.</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt'></td>
+  <td class=xl69 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:none;border-right:none;border-bottom:
+  1.0pt solid black;border-left:none'>Final Testing/Confiuration Setup</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:none;border-right:none;border-bottom:
+  1.0pt solid black;border-left:none'>7-Aug</td>
+  <td class=xl70 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:none;border-right:none;border-bottom:
+  1.0pt solid black;border-left:none'>21-Aug</td>
+  <td class=xl69 align=right style='font-size:12.0pt;color:black;font-weight:
+  400;text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:none;border-right:none;border-bottom:
+  1.0pt solid black;border-left:none'>14</td>
+  <td class=xl71 style='font-size:12.0pt;color:black;font-weight:400;
+  text-decoration:none;text-underline-style:none;text-line-through:none;
+  font-family:"Times New Roman";border-top:none;border-right:none;border-bottom:
+  1.0pt solid black;border-left:none'>This is the final testing proving
+  effectivness for industry production and use .</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 style='height:15.0pt' align=left valign=top><span
+  style='position:absolute;z-index:1;margin-left:42px;margin-top:0px;
+  width:1321px;height:354px'><img width=1321 height=354
+  src="Gantt_Chart_files/image001.png"></span>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td height=15 width=44 style='height:15.0pt;width:44pt'></td>
+   </tr>
+  </table>
+  </span></td>
+  <td></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=15 style='height:15.0pt'>
+  <td height=15 colspan=2 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl65></td>
+  <td class=xl65></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=150 style='height:150.0pt;mso-xlrowspan:10'>
+  <td height=150 colspan=14 style='height:150.0pt;mso-ignore:colspan'></td>
+ </tr>
+</table>
+
+</body>
+
+</html>
