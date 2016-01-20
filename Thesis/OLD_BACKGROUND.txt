@@ -1,0 +1,28 @@
+
+An example of this device is the Spectra Physics 470-04 Interferometer (SP-470-04), which is a "spherical mirror, Fabry-Perot interferometer". It has a confocal resonant cavity with a minimum finesse of 150 and a free spectral range (FSR) of 8 GHz. This is calculated by Eq.~\ref{finesse}~\cite{spectraphysics470}. 
+
+
+
+The sFPI ``can be used as a scanning spectrum analyzer..., as a static fringe interferometer, or as a tunable optical filter...''~\cite{spectraphysics470}. The SP-470-04 is comprised of a resonant cavity, capable of scanning, a driver, and a photo-detection setup for data analysis. The resonant cavity is constructed of a confocal mirror setup with an auxiliary lens as seen in Figures~\ref{fig:mirrorsetup} and~\ref{fig:beamdia}~\cite{hercher}.\\
+
+
+
+
+
+
+The first Fabry-Perot Interferometer was built using plane mirrors so as to be manipulated by changing their ``relative orientation and particularly to render them rigorously parallel". To properly calibrate the device, the mirrors were set to a calibrated distance which corresponded with the ``first resolution of the two yellow lines of mercury"~\cite{fabry-perot}. This design has changed over the years with the developments of the spherical mirror Fabry-Perot Interferometer (sFPI) and the internally coupled Fabry-Perot Interferometer (icFPI), which is simply a modification of the sFPI~\cite{hercher}~\cite{reich}. The sFPI is free from considerations due to mode matching and has increased optical power making it more efficient for higher resolution spectroscopy. Because the sFPI is more sensitive to changes in the mirror separations, changing the geometry of the resonant cavity allows for the scanning through the FSR.~\cite{hercher}. \newline
+
+
+\noindent There are two systems that can be used for changing the length of the resonant cavity. A pressure scanning system is used for scanning by a pressure differential to expand and contract the resonant cavity; however, its primary use is for static ultra-high resolution spectroscopy. The piezo-electrical scanning system, used by applying electrical charge, is utilized in spectrum analysis, tunable narrow bandpass filtering, and fringe interferometry~\cite{hercher}. The piezo-electric device operates as an transducer that "when an electric field is applied... deformation $(\Delta L)$ or strain $(\Delta L/L)$ arises". It has a corresponding impedance layout, that can be modeled using a resistor, capacitor, inductor circuit structure, with components corresponding to the piezoelectric motion and electrostatic capacitance \cite{piezo}. To produce the scanning effect a saw-tooth electric signal is applied across the piezoelectric device causing a change in length of the cavity~\cite{piezo}~\cite{hercher}.\newline
+
+
+The current driver, a Spectra Physics Model 476 Scanning Interferometer, produces a variable saw-tooth signal, as seen in Figure~\ref{fig:outputramp}. It has the capabilities of producing a max voltage of $300 V$ or $1 kV$ with a variable amplitude, offset, and frequency for each condition~\cite{sfpidriver}.  
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=3in]{driver.png}
+	\caption[Spectra Physics Model 476 High-Voltage Output]{Spectra Physics Model 476 High-Voltage Output~\cite{sfpidriver}}
+	\label{fig:outputramp}
+\end{figure}
+
+The SP-476 uses Op-Amps, switches, varistors, and BJT's (Figure~\ref{fig:ampschm}) to generate the unique sawtooth waveform. This allows for 5 different levels of amplification, a dc-biasing modulator for increased offset, as well as sweeping of the frequency from 0.002 - 0.2s to change the time of the scan. Because this driver is an all-in-one device, it also amplifies for the photodiode output, due to the incident light on it. It uses variable amplification, so as to tune the device with the output captured by an oscilloscope~\cite{sfpidriver} (Figure~\ref{fig:driverschm}).
