@@ -29,7 +29,7 @@ def generate(freq,length,cond,filename):
 def main():
 	print "--- Waveforms ---\n1. Sawtooth\n2. Triangle\n3. Sine/Cosine\n4. Convert MATLAB Data to PWL"
 	cond = input('>>')
-	filename = input('Path to File and Filename: ')
+	filename = str(input('Path to File and Filename: '))
 	if cond != 4:
 		length = input('Number of Data Points: ')
 		frequency = input('Frequency of the Waveform: ')
