@@ -22339,7 +22339,12 @@ Source: http://www.st.com/st-web-ui/static/active/en/resource/technical/document
 <gate name="G$1" symbol="337" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="-SOT223" package="SOT223">
+<connects>
+<connect gate="G$1" pin="SET" pad="1"/>
+<connect gate="G$1" pin="VI" pad="3"/>
+<connect gate="G$1" pin="VO" pad="2 4"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
