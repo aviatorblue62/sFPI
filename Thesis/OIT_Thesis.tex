@@ -189,7 +189,7 @@ x = d_{33}E
 \label{eq:strain}
 \end{equation}   
 
-Since strain ($x$) is the ratio of the change in length by the length ($\Delta L/L$) of the material and the applied electric ($E$) is the ratio of the applied voltage ($V$) to the length ($L$) over which it is applied ($V/L$), Equation~\ref{eq:strain} can be expressed as $\Delta L = d_{33}V$, directly relating the change in length to the change in applied voltage. If you have any doubts, the units work out to meters, given that the units of $d_{33}$ are pC/N~\cite{piezo}. For our applications a sawtooth voltage signal will be applied across the PZT. This will allow for scanning of the mirrors through the modes of the resonant cavity by systematically controlling $\Delta L$ for reproducible output. 
+Since strain ($x$) is the ratio of the change in length by the length ($\Delta L/L$) of the material and the applied electric ($E$) is the ratio of the applied voltage ($V$) to the length ($L$) over which it is applied ($V/L$), Equation~\ref{eq:strain} can be expressed as $\Delta L = d_{33}V$, directly relating the change in length to the change in applied voltage~\cite{piezo}. For our applications a sawtooth voltage signal will be applied across the PZT. This will allow for scanning of the mirrors through the modes of the resonant cavity by systematically controlling $\Delta L$ for reproducible output. 
 
 The transmission intensity resulting from the scanning of the cavity by means of the PZT is incident on a photodiode. Photodiodes have a unique characteristic where light incident upon the semiconductor ($h\nu$) produces a current. This can be done in the photovoltaic or photoconductive regions of operation; however, the photoconductive region, which operates in reverse bias, has a much higher responsivity. The responsivity of a photodiode ($R_{\lambda}$) is the ratio of current ($I_{P_n}$) in amperes to the incident power ($P_n$) in watts, where \textit{n} is an integer describing the different levels of incident power (Fig~\ref{fig:diode-curve}). The responsivity can be calculated by Equation~\ref{eq:responsivity}, where $\eta$ is the quantum efficiency, $h$ is Plank's constant, $\nu$ is the frequency of the light, and $e$ is the elementary charge~\ref.    
 
@@ -328,6 +328,24 @@ The photodiode is mounted on the back of the adjustable mounts (Figure~\ref{fig:
 \end{figure*}
 
 \section{Interferometer Driver Design}
+
+\subsection{Piezo-Electric Device}
+As stated in the previous sections, the piezo-electric device produces a change in length ($\Delta L$) as a function of the voltage across the device. In order to properly design the function generator, which will be driving the PZT, a Michelson Interferometer was constructed (see Figure~\ref{fig:michalson-interferometer}) to determine the strain coefficient of the material. 
+
+\begin{figure}
+\centering
+	\includegraphics[width=3in]{./piezo-electric_device/michalson_interferometer.png}
+	\caption[Michalson Interferometer]{Michelson Interferometer used for precisely measuring the change in distance of the piezoelectric device per voltage differential placed across it.}
+	\label{fig:michalson-interferometer}
+\end{figure}
+
+The PZT was supplied with an adjustable voltage supply ranging from 0-30V. When cycling from 0 to 30 V, seven individual fringe movements occurred. The distance moved was calculated to be:
+
+\begin{equation}
+d = \frac{m\lambda}{2} = 2.2148 \mu \text{m}
+\end{equation}
+
+Where $\lambda$ is the wavelength of the light (632.8 nm) and $m$ is the number of fringe changes observed. This resulted in the piezoelectric strain constant ($d_{33}$) equivilent to $73.8 \text{nm/V}. With a voltage scan from 0-30V will produce roughly 7 FSR when used in the sFPI. This PZT will be adequate for this application.
 
 \subsection{Function Generator}
 The micro-controller for the driver setup is constructed using an Arduino UNO (see Data Sheet on page~\pageref{datasheet:arduino_uno}). The Arduino UNO has firmware in which it communicates with a MCP4725 (see Data Sheet on page~\pageref{datasheet:mcp4725}) 12-bit Digital-to-Analog Converter (DAC) via the I2C communication protocol (see Figure~\ref{fig:function-generator}).The DAC attenuates the +5V 10\% voltage supply from the Arduino UNO with $2^12$ individual output values. A peak-to-peak sawtooth voltage signal is the result, with a bit resolution of 1.2 mV/bit at a frequency of 2.5 Hz (see Figure~\ref{fig:five-volts-15-hz-wave}). The MCP4725 signal-generator acts as a near-perfect voltage source with a series impedance of $1\Omega$ when in normal operations. This will not affect input resistances for the analog design.  
