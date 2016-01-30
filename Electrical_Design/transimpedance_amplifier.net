@@ -1,0 +1,20 @@
+* Z:\Users\aviatorblue\Documents\Senior Project\Electrical_Design\transimpedance_amplifier.asc
+V1 Vdd 0 5
+V2 0 Vss 5
+I1 N005 N006 SINE(0.00000005 0.0000001 200)
+R1 N004 N002 75k
+V3 N003 0 5
+R5 N003 N005 12k
+C1 0 N004 10n
+XU1 0 N001 Vdd 0 N002 LT1007
+XU2 0 N004 Vdd 0 Vout LT1007
+R2 N001 0 1G
+C2 N001 0 100p
+C3 N002 N001 10n
+R3 N001 N002 10Meg
+R4 N004 Vout 20Meg
+C4 N001 N006 1µ
+.tran 0 1 0.95
+.lib LTC.lib
+.backanno
+.end

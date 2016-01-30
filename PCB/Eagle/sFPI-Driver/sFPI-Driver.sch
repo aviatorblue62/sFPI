@@ -12949,7 +12949,7 @@ with shutdown</description>
 <parts>
 <part name="IC1" library="Arduino-AVR" deviceset="ATMEGA168-PU" device=""/>
 <part name="QF1" library="crystal" deviceset="16M20AUM1" device=""/>
-<part name="OPAMP1" library="LTC" deviceset="LT1006CN8PBF" device=""/>
+<part name="U1" library="LTC" deviceset="LT1006CN8PBF" device=""/>
 <part name="R2" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
 <part name="DAC1" library="sFPI" deviceset="MCP4725" device="-1"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
@@ -12962,24 +12962,24 @@ with shutdown</description>
 <part name="R3" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
 <part name="P+2" library="supply1" deviceset="V+" device=""/>
 <part name="R8" library="rcl" deviceset="R-US_" device="M1206" value="3.3k"/>
-<part name="OPAMP2" library="LTC" deviceset="LT1006CN8PBF" device=""/>
+<part name="U2" library="LTC" deviceset="LT1006CN8PBF" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="R10" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
 <part name="P-2" library="supply1" deviceset="V-" device=""/>
-<part name="OPAMP3" library="LTC" deviceset="LT1006CN8PBF" device=""/>
+<part name="U3" library="LTC" deviceset="LT1006CN8PBF" device=""/>
 <part name="R15" library="rcl" deviceset="R-US_" device="M1206" value="3.3k"/>
 <part name="P+1" library="supply1" deviceset="V+" device=""/>
 <part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
 <part name="R16" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
-<part name="OPAMP4" library="LTC" deviceset="LT1006CN8PBF" device=""/>
-<part name="OPAMP5" library="LTC" deviceset="LT1006CN8PBF" device=""/>
+<part name="U4" library="LTC" deviceset="LT1006CN8PBF" device=""/>
+<part name="U5" library="LTC" deviceset="LT1006CN8PBF" device=""/>
 <part name="VR2" library="sFPI" deviceset="LT3080" device="-SOT223"/>
 <part name="C3" library="rcl" deviceset="C-US" device="050-030X075" value="1u"/>
 <part name="R4" library="rcl" deviceset="POTENTIOMETER_" device="PT-10"/>
 <part name="C4" library="rcl" deviceset="C-US" device="050-030X075" value="1u"/>
 <part name="P+3" library="supply1" deviceset="V+" device=""/>
 <part name="P-1" library="supply1" deviceset="V-" device=""/>
-<part name="OPAMP6" library="LTC" deviceset="LT1006CN8PBF" device=""/>
+<part name="U6" library="LTC" deviceset="LT1006CN8PBF" device=""/>
 <part name="R5" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
 <part name="R6" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
 <part name="R9" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
@@ -12987,6 +12987,9 @@ with shutdown</description>
 <part name="R1" library="rcl" deviceset="POTENTIOMETER_" device="PT-10"/>
 <part name="R7" library="rcl" deviceset="POTENTIOMETER_" device="PT-10"/>
 <part name="R11" library="rcl" deviceset="POTENTIOMETER_" device="PT-10"/>
+<part name="R12" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
+<part name="C5" library="rcl" deviceset="C-US" device="050-025X075"/>
+<part name="C6" library="rcl" deviceset="C-US" device="050-025X075"/>
 </parts>
 <sheets>
 <sheet>
@@ -12995,7 +12998,7 @@ with shutdown</description>
 <instances>
 <instance part="IC1" gate="1" x="22.86" y="60.96"/>
 <instance part="QF1" gate="G$1" x="-17.78" y="71.12" rot="R270"/>
-<instance part="OPAMP1" gate="A" x="160.02" y="73.66"/>
+<instance part="U1" gate="A" x="160.02" y="73.66"/>
 <instance part="R2" gate="G$1" x="132.08" y="76.2" rot="R180"/>
 <instance part="DAC1" gate="G$1" x="86.36" y="71.12"/>
 <instance part="SUPPLY1" gate="GND" x="73.66" y="50.8"/>
@@ -13008,24 +13011,24 @@ with shutdown</description>
 <instance part="R3" gate="G$1" x="157.48" y="99.06" rot="R180"/>
 <instance part="P+2" gate="1" x="27.94" y="137.16"/>
 <instance part="R8" gate="G$1" x="210.82" y="83.82" rot="R180"/>
-<instance part="OPAMP2" gate="A" x="246.38" y="73.66"/>
+<instance part="U2" gate="A" x="246.38" y="73.66"/>
 <instance part="SUPPLY5" gate="GND" x="220.98" y="96.52" rot="R180"/>
 <instance part="R10" gate="G$1" x="243.84" y="99.06" rot="R180"/>
 <instance part="P-2" gate="1" x="223.52" y="33.02"/>
-<instance part="OPAMP3" gate="A" x="332.74" y="73.66"/>
+<instance part="U3" gate="A" x="332.74" y="73.66"/>
 <instance part="R15" gate="G$1" x="297.18" y="83.82" rot="R180"/>
 <instance part="P+1" gate="1" x="223.52" y="114.3"/>
 <instance part="SUPPLY6" gate="GND" x="307.34" y="96.52" rot="R180"/>
 <instance part="R16" gate="G$1" x="330.2" y="99.06" rot="R180"/>
-<instance part="OPAMP4" gate="A" x="419.1" y="114.3"/>
-<instance part="OPAMP5" gate="A" x="416.56" y="187.96"/>
+<instance part="U4" gate="A" x="419.1" y="114.3"/>
+<instance part="U5" gate="A" x="416.56" y="187.96"/>
 <instance part="VR2" gate="G$1" x="347.98" y="180.34"/>
 <instance part="C3" gate="G$1" x="314.96" y="165.1"/>
 <instance part="R4" gate="1" x="330.2" y="154.94"/>
 <instance part="C4" gate="G$1" x="363.22" y="160.02"/>
 <instance part="P+3" gate="1" x="325.12" y="187.96"/>
 <instance part="P-1" gate="1" x="330.2" y="139.7"/>
-<instance part="OPAMP6" gate="A" x="530.86" y="152.4"/>
+<instance part="U6" gate="A" x="530.86" y="152.4"/>
 <instance part="R5" gate="G$1" x="454.66" y="124.46" rot="R180"/>
 <instance part="R6" gate="G$1" x="452.12" y="198.12" rot="R180"/>
 <instance part="R9" gate="G$1" x="528.32" y="182.88" rot="R180"/>
@@ -13033,6 +13036,9 @@ with shutdown</description>
 <instance part="R1" gate="1" x="284.48" y="83.82"/>
 <instance part="R7" gate="1" x="198.12" y="83.82"/>
 <instance part="R11" gate="1" x="121.92" y="76.2"/>
+<instance part="R12" gate="G$1" x="-7.62" y="83.82" rot="R270"/>
+<instance part="C5" gate="G$1" x="-30.48" y="81.28" rot="R270"/>
+<instance part="C6" gate="G$1" x="-30.48" y="66.04" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -13042,6 +13048,10 @@ with shutdown</description>
 <pinref part="IC1" gate="1" pin="CRYSTAL1"/>
 <pinref part="QF1" gate="G$1" pin="1"/>
 <wire x1="-7.62" y1="73.66" x2="-17.78" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="-27.94" y1="81.28" x2="-17.78" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="81.28" x2="-17.78" y2="73.66" width="0.1524" layer="91"/>
+<junction x="-17.78" y="73.66"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13049,6 +13059,10 @@ with shutdown</description>
 <pinref part="IC1" gate="1" pin="CRYSTAL2"/>
 <pinref part="QF1" gate="G$1" pin="3"/>
 <wire x1="-7.62" y1="68.58" x2="-17.78" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="-27.94" y1="66.04" x2="-20.32" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="66.04" x2="-17.78" y2="68.58" width="0.1524" layer="91"/>
+<junction x="-17.78" y="68.58"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -13057,8 +13071,9 @@ with shutdown</description>
 <pinref part="IC1" gate="1" pin="VCC"/>
 <wire x1="-7.62" y1="53.34" x2="-7.62" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="60.96" x2="-12.7" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="60.96" x2="-12.7" y2="127" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="60.96" x2="-12.7" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-7.62" y="60.96"/>
+<wire x1="-12.7" y1="76.2" x2="-12.7" y2="127" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="127" x2="60.96" y2="127" width="0.1524" layer="91"/>
 <pinref part="VR1" gate="G$1" pin="SENSE"/>
 <pinref part="VR1" gate="G$1" pin="OUT"/>
@@ -13073,6 +13088,9 @@ with shutdown</description>
 <pinref part="DAC1" gate="G$1" pin="VDD"/>
 <wire x1="101.6" y1="71.12" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="119.38" x2="101.6" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="78.74" x2="-12.7" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-12.7" y="76.2"/>
+<pinref part="R12" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -13113,6 +13131,13 @@ with shutdown</description>
 <wire x1="-7.62" y1="38.1" x2="-12.7" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <junction x="-7.62" y="33.02"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="-35.56" y1="81.28" x2="-35.56" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="73.66" x2="-35.56" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="66.04" x2="-35.56" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="60.96" x2="-22.86" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-22.86" y="48.26"/>
 </segment>
 <segment>
 <pinref part="VR1" gate="G$1" pin="GND"/>
@@ -13124,24 +13149,24 @@ with shutdown</description>
 </segment>
 <segment>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
-<pinref part="OPAMP1" gate="A" pin="+IN"/>
+<pinref part="U1" gate="A" pin="+IN"/>
 <wire x1="142.24" y1="78.74" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="86.36" x2="134.62" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OPAMP2" gate="A" pin="+IN"/>
+<pinref part="U2" gate="A" pin="+IN"/>
 <wire x1="228.6" y1="78.74" x2="220.98" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
 <wire x1="220.98" y1="86.36" x2="220.98" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OPAMP3" gate="A" pin="+IN"/>
+<pinref part="U3" gate="A" pin="+IN"/>
 <wire x1="314.96" y1="78.74" x2="307.34" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="86.36" x2="307.34" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="OPAMP6" gate="A" pin="+IN"/>
+<pinref part="U6" gate="A" pin="+IN"/>
 <wire x1="513.08" y1="157.48" x2="500.38" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="500.38" y1="170.18" x2="500.38" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
@@ -13171,25 +13196,25 @@ with shutdown</description>
 <wire x1="27.94" y1="119.38" x2="27.94" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OPAMP2" gate="A" pin="V+"/>
+<pinref part="U2" gate="A" pin="V+"/>
 <wire x1="228.6" y1="83.82" x2="223.52" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="88.9" x2="223.52" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="OPAMP3" gate="A" pin="V+"/>
+<pinref part="U3" gate="A" pin="V+"/>
 <wire x1="314.96" y1="83.82" x2="309.88" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="88.9" x2="309.88" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="106.68" x2="223.52" y2="106.68" width="0.1524" layer="91"/>
 <junction x="223.52" y="106.68"/>
 <wire x1="223.52" y1="106.68" x2="137.16" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="OPAMP1" gate="A" pin="V+"/>
+<pinref part="U1" gate="A" pin="V+"/>
 <wire x1="142.24" y1="83.82" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="88.9" x2="137.16" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="106.68" x2="223.52" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="V+"/>
-<pinref part="OPAMP4" gate="A" pin="V+"/>
+<pinref part="U4" gate="A" pin="V+"/>
 <wire x1="401.32" y1="124.46" x2="383.54" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="383.54" y1="106.68" x2="378.46" y2="106.68" width="0.1524" layer="91"/>
 <junction x="309.88" y="106.68"/>
-<pinref part="OPAMP6" gate="A" pin="V+"/>
+<pinref part="U6" gate="A" pin="V+"/>
 <wire x1="378.46" y1="106.68" x2="309.88" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="513.08" y1="162.56" x2="439.42" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="439.42" y1="162.56" x2="414.02" y2="137.16" width="0.1524" layer="91"/>
@@ -13206,7 +13231,7 @@ with shutdown</description>
 <pinref part="P+3" gate="1" pin="V+"/>
 <wire x1="325.12" y1="185.42" x2="325.12" y2="180.34" width="0.1524" layer="91"/>
 <junction x="325.12" y="180.34"/>
-<pinref part="OPAMP5" gate="A" pin="V+"/>
+<pinref part="U5" gate="A" pin="V+"/>
 <wire x1="398.78" y1="198.12" x2="342.9" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="198.12" x2="325.12" y2="180.34" width="0.1524" layer="91"/>
 </segment>
@@ -13215,7 +13240,7 @@ with shutdown</description>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="99.06" x2="172.72" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="OPAMP1" gate="A" pin="OUT"/>
+<pinref part="U1" gate="A" pin="OUT"/>
 <wire x1="177.8" y1="83.82" x2="187.96" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="99.06" x2="187.96" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="R7" gate="1" pin="3"/>
@@ -13251,7 +13276,7 @@ with shutdown</description>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="152.4" y1="99.06" x2="147.32" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="OPAMP1" gate="A" pin="-IN"/>
+<pinref part="U1" gate="A" pin="-IN"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="76.2" x2="139.7" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="76.2" x2="142.24" y2="76.2" width="0.1524" layer="91"/>
@@ -13280,7 +13305,7 @@ with shutdown</description>
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="302.26" y1="83.82" x2="309.88" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="OPAMP3" gate="A" pin="-IN"/>
+<pinref part="U3" gate="A" pin="-IN"/>
 <wire x1="309.88" y1="76.2" x2="312.42" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="312.42" y1="76.2" x2="314.96" y2="76.2" width="0.1524" layer="91"/>
 <junction x="312.42" y="76.2"/>
@@ -13295,9 +13320,9 @@ with shutdown</description>
 <pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="335.28" y1="99.06" x2="345.44" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="345.44" y1="99.06" x2="360.68" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="OPAMP3" gate="A" pin="OUT"/>
+<pinref part="U3" gate="A" pin="OUT"/>
 <wire x1="360.68" y1="83.82" x2="350.52" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="OPAMP4" gate="A" pin="+IN"/>
+<pinref part="U4" gate="A" pin="+IN"/>
 <wire x1="360.68" y1="83.82" x2="365.76" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="83.82" x2="401.32" y2="119.38" width="0.1524" layer="91"/>
 <junction x="360.68" y="83.82"/>
@@ -13307,18 +13332,18 @@ with shutdown</description>
 <segment>
 <pinref part="P-2" gate="1" pin="V-"/>
 <wire x1="223.52" y1="35.56" x2="223.52" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="OPAMP2" gate="A" pin="V-"/>
+<pinref part="U2" gate="A" pin="V-"/>
 <wire x1="223.52" y1="45.72" x2="223.52" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="53.34" x2="228.6" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="45.72" x2="302.26" y2="45.72" width="0.1524" layer="91"/>
 <junction x="223.52" y="45.72"/>
-<pinref part="OPAMP3" gate="A" pin="V-"/>
+<pinref part="U3" gate="A" pin="V-"/>
 <wire x1="302.26" y1="45.72" x2="314.96" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="45.72" x2="347.98" y2="45.72" width="0.1524" layer="91"/>
 <junction x="302.26" y="45.72"/>
-<pinref part="OPAMP4" gate="A" pin="V-"/>
+<pinref part="U4" gate="A" pin="V-"/>
 <wire x1="347.98" y1="45.72" x2="401.32" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="OPAMP6" gate="A" pin="V-"/>
+<pinref part="U6" gate="A" pin="V-"/>
 <wire x1="347.98" y1="45.72" x2="421.64" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="421.64" y1="45.72" x2="513.08" y2="137.16" width="0.1524" layer="91"/>
 <junction x="347.98" y="45.72"/>
@@ -13336,7 +13361,7 @@ with shutdown</description>
 <wire x1="358.14" y1="147.32" x2="363.22" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="P-1" gate="1" pin="V-"/>
 <wire x1="330.2" y1="142.24" x2="330.2" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="OPAMP5" gate="A" pin="V-"/>
+<pinref part="U5" gate="A" pin="V-"/>
 <wire x1="358.14" y1="147.32" x2="373.38" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="373.38" y1="147.32" x2="398.78" y2="172.72" width="0.1524" layer="91"/>
 <junction x="358.14" y="147.32"/>
@@ -13344,7 +13369,7 @@ with shutdown</description>
 </net>
 <net name="N$18" class="0">
 <segment>
-<pinref part="OPAMP1" gate="A" pin="V-"/>
+<pinref part="U1" gate="A" pin="V-"/>
 <wire x1="137.16" y1="53.34" x2="142.24" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="53.34" x2="137.16" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="50.8" x2="142.24" y2="45.72" width="0.1524" layer="91"/>
@@ -13353,7 +13378,7 @@ with shutdown</description>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="OPAMP5" gate="A" pin="+IN"/>
+<pinref part="U5" gate="A" pin="+IN"/>
 <wire x1="398.78" y1="193.04" x2="391.16" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="391.16" y1="193.04" x2="378.46" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="VR2" gate="G$1" pin="VO"/>
@@ -13374,14 +13399,14 @@ with shutdown</description>
 </net>
 <net name="N$24" class="0">
 <segment>
-<pinref part="OPAMP4" gate="A" pin="-IN"/>
+<pinref part="U4" gate="A" pin="-IN"/>
 <wire x1="401.32" y1="116.84" x2="396.24" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="396.24" y1="111.76" x2="396.24" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="396.24" y1="88.9" x2="403.86" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="403.86" y1="81.28" x2="434.34" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="434.34" y1="81.28" x2="441.96" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="441.96" y1="88.9" x2="441.96" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="OPAMP4" gate="A" pin="OUT"/>
+<pinref part="U4" gate="A" pin="OUT"/>
 <wire x1="441.96" y1="119.38" x2="436.88" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="449.58" y1="124.46" x2="436.88" y2="124.46" width="0.1524" layer="91"/>
 <junction x="436.88" y="124.46"/>
@@ -13390,11 +13415,11 @@ with shutdown</description>
 </net>
 <net name="N$17" class="0">
 <segment>
-<pinref part="OPAMP5" gate="A" pin="OUT"/>
+<pinref part="U5" gate="A" pin="OUT"/>
 <wire x1="441.96" y1="190.5" x2="434.34" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="441.96" y1="167.64" x2="441.96" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="434.34" y1="160.02" x2="441.96" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="OPAMP5" gate="A" pin="-IN"/>
+<pinref part="U5" gate="A" pin="-IN"/>
 <wire x1="398.78" y1="190.5" x2="391.16" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="391.16" y1="190.5" x2="381" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="381" y1="180.34" x2="381" y2="165.1" width="0.1524" layer="91"/>
@@ -13407,7 +13432,7 @@ with shutdown</description>
 </net>
 <net name="N$19" class="0">
 <segment>
-<pinref part="OPAMP6" gate="A" pin="-IN"/>
+<pinref part="U6" gate="A" pin="-IN"/>
 <wire x1="459.74" y1="124.46" x2="482.6" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="482.6" y1="124.46" x2="513.08" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="457.2" y1="198.12" x2="469.9" y2="198.12" width="0.1524" layer="91"/>
@@ -13421,19 +13446,26 @@ with shutdown</description>
 <junction x="485.14" y="182.88"/>
 </segment>
 </net>
-<net name="N$25" class="0">
+<net name="V_PZT" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="533.4" y1="182.88" x2="541.02" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="541.02" y1="182.88" x2="561.34" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="OPAMP6" gate="A" pin="OUT"/>
+<pinref part="U6" gate="A" pin="OUT"/>
 <wire x1="561.34" y1="162.56" x2="548.64" y2="162.56" width="0.1524" layer="91"/>
+<label x="561.34" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="R11" gate="1" pin="2"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="IC1" gate="1" pin="RESET"/>
+<pinref part="R12" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
