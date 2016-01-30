@@ -3,8 +3,12 @@
 import sys, os, re
 from subprocess import call
 import csv
+import math
 
-def generate(freq,length,cond,filename,data):
+
+def generate(self,amplitude=None,duration=None,freq=None,length=None,cond=1,data=None):
+    global filename
+    filename = str(raw_input('Path to written File and Filename: '))
     dp = []
     string = None
     if freq is not None:
@@ -27,7 +31,7 @@ def generate(freq,length,cond,filename,data):
             x = x + 2
         f.close()
 
-    if cond == 4:
+    elif cond == 4:
         horizontal = {}
         vertical = {}
         horizontal['name'] = None
@@ -38,9 +42,12 @@ def generate(freq,length,cond,filename,data):
         vertical['units'] = None
         with open(data,'rb') as csvfile:
             data_file = csv.reader(csvfile,delimiter = ";",quotechar='|')
+            titles = data_file[0][0].split(',')
+            for i in range(len(titles)):
+                print "Item %d: %s" % (i+1, titles[i])
             horz = input('Horizontal Axis Column (Ex. 1): ')
             vert = input('Vertical Axis Column (Ex. 2): ')
-            units_row = 'N'
+            units_row = 'N' # Default Value
             while True:
                 try:
                     units_row = raw_input("Is there a units row?(y/N):  ")
@@ -54,6 +61,7 @@ def generate(freq,length,cond,filename,data):
                 units_row = False
                 u = 0
             skipping = input('Number of rows to skip: ')
+            scale = input('Scaling Factor: ')
             inc = 1
             for rows in data_file:
                 rows = rows[0].split(',')
@@ -76,21 +84,44 @@ def generate(freq,length,cond,filename,data):
             input_string = (str(horizontal['data'][pts]) + ' ' + str(vertical['data'][pts]) + ' ')
             output_file.write(input_string)
         output_file.close()
+        print ("Length of each vector was " + str(len(horizontal['data'])) + " data points")
+
+    elif cond == 5:
+        noise = []
+        time = []
+        duration = float(duration)
+        length = float(length)
+        scale = float(duration/length)
+        for pts in range(length):
+            noise.append(random.uniform(0,amplitude))
+            time.append(pts*scale)
+        with open(filename, 'w') as noise_file:
+            for values in range(length(noise)):
+                string = str(time[values]) + " " + str(noise[values]) + " "
+                noise_file.write(string)
+            noise_file.close()
+
 
 def main():
-    print ("--- Waveforms ---\n1. Sawtooth\n2. Triangle\n3. Sine/Cosine\n4. Convert CSV Data to PWL")
+    print ("--- Waveforms ---\n1. Sawtooth\n2. Triangle\n3. Sine/Cosine\n4. Convert CSV Data to PWL\n5. Generate Noise Signal")
     cond = input('>> ')
-    filename = str(raw_input('Path to written File and Filename: '))
-    if cond != 4:
+    if cond == 1:
         length = raw_input('Number of Data Points: ')
         frequency = input('Frequency of the Waveform: ')
-        generate(frequency,length,cond,filename,None)
-        print ("Written to " + filename + '.txt')
-    else:
+        generate(None,None,frequency,length,cond,None)
+        print ("Written to " + filename)
+    elif cond == 5:
+        length = raw_input('Number of Data Points: ')
+        amp = raw_input('Amplitude of the Noise Signal(units): ')
+        duration = raw_input('Duration of the Noise Signal(sec): ')
+        generate(amp,duration,None,length,cond,None)
+        print ("Noise file generated to " + filename)
+    elif cond == 4:
         data_file = str(raw_input('Path to data file and filename: '))
-        generate(None,None,cond,filename,data_file)
+        generate(None,None,None,None,cond,data_file)
         print ("Data from " + str(data_file) + " was written to " + str(filename))
-
+    else:
+        print "Current programs are still in beta testing sorry :("
 if __name__ == "__main__":
     main()
     sys.exit()
