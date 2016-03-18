@@ -6,6 +6,15 @@ Ph.D. Gui, Gui.
   optoelectronic devices}.
 \newblock PhD thesis, THE UNIVERSITY OF WISCONSIN - MADISON, 2014.
 
+\bibitem{michelson}
+HyperPhysics.
+\newblock Michelson interferometer, 2009.
+
+\bibitem{MAX635}
+Maxim Integrated Products.
+\newblock {\em Preset/Adjustable Output CMOS Inverting Switching Regulators},
+  1991.
+
 \bibitem{diode-curve}
 OSI Optoelectronics.
 \newblock {\em Photodiode Characteristics and Applications}.
