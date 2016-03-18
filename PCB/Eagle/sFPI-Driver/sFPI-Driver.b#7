@@ -1782,8 +1782,8 @@ design rules under a new name.</description>
 </element>
 <element name="VR2" library="sFPI" package="SOT223" value="LT3080-SOT223" x="36.83" y="48.26"/>
 <element name="R12" library="rcl" package="M1206" value="10k" x="15.24" y="24.13"/>
-<element name="C5" library="rcl" package="C050-025X075" value="" x="5.08" y="-3.81"/>
-<element name="C6" library="rcl" package="C050-025X075" value="" x="5.08" y="-8.89"/>
+<element name="C5" library="rcl" package="C050-025X075" value="" x="6.35" y="31.75"/>
+<element name="C6" library="rcl" package="C050-025X075" value="" x="6.35" y="25.4"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -1791,14 +1791,14 @@ design rules under a new name.</description>
 <contactref element="QF1" pad="1"/>
 <contactref element="C5" pad="1"/>
 <wire x1="13.365" y1="31.75" x2="11.43" y2="53.34" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="-3.81" x2="13.365" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="31.75" x2="13.365" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="IC1" pad="10"/>
 <contactref element="QF1" pad="3"/>
 <contactref element="C6" pad="1"/>
 <wire x1="17.115" y1="31.75" x2="11.43" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="-8.89" x2="17.115" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="25.4" x2="17.115" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="IC1" pad="20"/>
@@ -1849,8 +1849,8 @@ design rules under a new name.</description>
 <wire x1="11.43" y1="55.88" x2="19.05" y2="58.42" width="0" layer="19" extent="1-1"/>
 <wire x1="26.67" y1="62.35" x2="19.05" y2="58.42" width="0" layer="19" extent="1-1"/>
 <wire x1="25.72" y1="64.65" x2="26.67" y2="62.35" width="0" layer="19" extent="1-1"/>
-<wire x1="7.62" y1="-3.81" x2="15.213" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="7.62" y1="-8.89" x2="7.62" y2="-3.81" width="0" layer="19" extent="1-1"/>
+<wire x1="8.89" y1="31.75" x2="15.213" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="8.89" y1="25.4" x2="8.89" y2="31.75" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <contactref element="C2" pad="+"/>

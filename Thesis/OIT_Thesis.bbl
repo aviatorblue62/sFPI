@@ -6,15 +6,13 @@ Ph.D. Gui, Gui.
   optoelectronic devices}.
 \newblock PhD thesis, THE UNIVERSITY OF WISCONSIN - MADISON, 2014.
 
-\bibitem{cavity_stability}
-Igor~A. Litvin.
-\newblock Stability of a laser cavity with non-parabolic phase transformation
-  elements.
-\newblock {\em Optical Society of America}, 21(9), 2013.
-
 \bibitem{diode-curve}
 OSI Optoelectronics.
 \newblock {\em Photodiode Characteristics and Applications}.
+
+\bibitem{spectraphysics450}
+Spectra Physics: Laser Instrument Division.
+\newblock {\em Model 450 Interferometer}.
 
 \bibitem{piezo}
 Kenji Uchino.
