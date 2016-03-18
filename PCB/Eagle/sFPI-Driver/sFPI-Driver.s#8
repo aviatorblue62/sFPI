@@ -12988,6 +12988,8 @@ with shutdown</description>
 <part name="R7" library="rcl" deviceset="POTENTIOMETER_" device="PT-10"/>
 <part name="R11" library="rcl" deviceset="POTENTIOMETER_" device="PT-10"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="M1206" value="10k"/>
+<part name="C5" library="rcl" deviceset="C-US" device="050-025X075"/>
+<part name="C6" library="rcl" deviceset="C-US" device="050-025X075"/>
 </parts>
 <sheets>
 <sheet>
@@ -13035,6 +13037,8 @@ with shutdown</description>
 <instance part="R7" gate="1" x="198.12" y="83.82"/>
 <instance part="R11" gate="1" x="121.92" y="76.2"/>
 <instance part="R12" gate="G$1" x="-7.62" y="83.82" rot="R270"/>
+<instance part="C5" gate="G$1" x="-30.48" y="81.28" rot="R270"/>
+<instance part="C6" gate="G$1" x="-30.48" y="66.04" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -13044,6 +13048,10 @@ with shutdown</description>
 <pinref part="IC1" gate="1" pin="CRYSTAL1"/>
 <pinref part="QF1" gate="G$1" pin="1"/>
 <wire x1="-7.62" y1="73.66" x2="-17.78" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="-27.94" y1="81.28" x2="-17.78" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="81.28" x2="-17.78" y2="73.66" width="0.1524" layer="91"/>
+<junction x="-17.78" y="73.66"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13051,6 +13059,10 @@ with shutdown</description>
 <pinref part="IC1" gate="1" pin="CRYSTAL2"/>
 <pinref part="QF1" gate="G$1" pin="3"/>
 <wire x1="-7.62" y1="68.58" x2="-17.78" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="-27.94" y1="66.04" x2="-20.32" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="66.04" x2="-17.78" y2="68.58" width="0.1524" layer="91"/>
+<junction x="-17.78" y="68.58"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -13119,6 +13131,13 @@ with shutdown</description>
 <wire x1="-7.62" y1="38.1" x2="-12.7" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <junction x="-7.62" y="33.02"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="-35.56" y1="81.28" x2="-35.56" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="73.66" x2="-35.56" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="66.04" x2="-35.56" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="60.96" x2="-22.86" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-22.86" y="48.26"/>
 </segment>
 <segment>
 <pinref part="VR1" gate="G$1" pin="GND"/>

@@ -12947,8 +12947,6 @@ with shutdown</description>
 <part name="C7" library="sFPI" deviceset="CAP-CER-22PF-50V-NP0-RADIAL" device=""/>
 <part name="C8" library="sFPI" deviceset="CAP-CER-22PF-50V-NP0-RADIAL" device=""/>
 <part name="C9" library="sFPI" deviceset="CAP-CER-22PF-50V-NP0-RADIAL" device=""/>
-<part name="C5" library="sFPI" deviceset="CAP-CER-22PF-50V-NP0-RADIAL" device=""/>
-<part name="C6" library="sFPI" deviceset="CAP-CER-22PF-50V-NP0-RADIAL" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
 <part name="R2" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
 <part name="R4" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
@@ -12956,6 +12954,8 @@ with shutdown</description>
 <part name="T1" library="sFPI" deviceset="POTMILRV8" device="-SPR"/>
 <part name="T2" library="sFPI" deviceset="POTMILRV8" device="-SPR"/>
 <part name="T3" library="sFPI" deviceset="POTMILRV8" device="-SPR"/>
+<part name="C5" library="rcl" deviceset="C-US" device="025-024X044"/>
+<part name="C6" library="rcl" deviceset="C-US" device="025-024X044"/>
 </parts>
 <sheets>
 <sheet>
@@ -12999,8 +12999,6 @@ with shutdown</description>
 <instance part="C7" gate="G$1" x="127" y="88.9"/>
 <instance part="C8" gate="G$1" x="213.36" y="91.44"/>
 <instance part="C9" gate="G$1" x="299.72" y="91.44"/>
-<instance part="C5" gate="G$1" x="-30.48" y="81.28" rot="R90"/>
-<instance part="C6" gate="G$1" x="-30.48" y="66.04" rot="R90"/>
 <instance part="R1" gate="G$1" x="132.08" y="76.2"/>
 <instance part="R2" gate="G$1" x="157.48" y="99.06"/>
 <instance part="R4" gate="G$1" x="243.84" y="99.06"/>
@@ -13008,6 +13006,8 @@ with shutdown</description>
 <instance part="T1" gate="G$1" x="284.48" y="83.82"/>
 <instance part="T2" gate="G$1" x="198.12" y="83.82"/>
 <instance part="T3" gate="G$1" x="119.38" y="76.2"/>
+<instance part="C5" gate="G$1" x="-33.02" y="81.28" rot="R90"/>
+<instance part="C6" gate="G$1" x="-33.02" y="66.04" rot="R90"/>
 </instances>
 <busses>
 </busses>

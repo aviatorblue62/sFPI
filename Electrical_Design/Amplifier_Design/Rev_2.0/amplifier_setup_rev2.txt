@@ -1,37 +1,47 @@
-* Z:\Users\aviatorblue\Documents\sFPI\Electrical Design\Amplifier_Design\amplifier_setup_rev2.asc
-* The LT1001 component is used in place of the NTE941M 
-XU1 0 N011 Vdd Vss N012 LT1001
-XU2 0 N006 Vdd Vss N007 LT1001
-XU3 0 N009 Vdd Vss N010 LT1001
-XU4 0 N008 Vdd Vss Vac LT1001
-R1 N011 N013 10k
-R2 N012 N011 10k
-R3 N006 N012 5k
+* Z:\Users\aviatorblue\Documents\Senior Project\Electrical_Design\Amplifier_Design\Rev_2.0\amplifier_setup_rev2.asc
+R1 N009 N012 10k
+R2 N010 N009 10k
+R3 N006 N010 3.3k
 R4 N007 N006 10k
-R5 N009 N007 5k
-R6 N010 N009 10k
-R7 N008 N010 10k
-R8 Vac N008 10k
-* The sawtooth_current.txt file is generated using a python script located in the same directory
-V1 N013 0 PWL file=sawtooth_current.txt
+R5 N008 N007 3.3k
+R6 Vac N008 10k
+Vdac N011 N013 PWL file="Z:\Users\aviatorblue\Documents\Senior Project\Electrical_Design\Amplifier_Design\Signals\DAC-Output-2.35Hz-Long.txt"
 V2 Vdd 0 17
 V3 0 Vss 17
-* The LT1086 component is used in place of the NTEXXX (5 V regulator)
 XU5 0 5V Vdd LT1085-5
 R_Arduino 5V 0 10Meg
-* The LT1086 component is used in place of the NTE956
 XU6 N003 Vdc Vdd LT1086
-R10 N003 Vss 2.6k
-R11 Vdc N003 1.5k
-XU9 0 N002 Vdd Vss Vout LT1001
-XU10 Vac N004 Vdd Vss N004 LT1001
-XU11 Vdc N001 Vdd Vss N001 LT1001
-R19 N002 N001 100k
-R20 N002 N004 100k
-R12 Vout N002 100k
-R13 Vout N005 300
+RC N003 Vss 2.6k
+RT Vdc N003 2.0k
+Rpzt Vout N005 300
 C1 N005 0 15.51n
-.tran 0 0.01 0
+XU1 0 N009 Vdd Vss N010 LT1006
+XU2 0 N006 Vdd Vss N007 LT1006
+XU3 0 N008 Vdd Vss Vac LT1006
+XU7 0 N001 Vdd Vss N001 LT1006
+XU8 Vac N004 Vdd Vss N004 LT1006
+XU9 0 N002 Vdd Vss Vout LT1006
+R8 N002 N001 1Meg
+R7 N002 N004 1Meg
+R9 Vout N002 1Meg
+C2 N012 N011 100µ
+C3 N008 0 10p
+C4 N009 0 10p
+C5 N006 0 10p
+C9 N002 0 0.5p
+Vnoise N013 0 PWL file="Z:\Users\aviatorblue\Documents\Senior Project\Electrical_Design\Amplifier_Design\Signals\White-Noise-1V-Long.txt"
+C6 0 Vss 1µ
+C7 Vdd 0 1µ
+C8 5V 0 1µ
+C10 Vdc 0 1µ
+C11 N010 N009 100n
+C12 N007 N006 100n
+C13 Vac N008 100n
+.tran 0 14 0
+* PZT
+* Fg = 159.15kHz
+* Fg = 159.15kHz
+* Fg = 159.15kHz
 .lib LT1083.lib
 .lib LTC.lib
 .backanno

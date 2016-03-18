@@ -1,4 +1,4 @@
-Circuit: * Z:\Users\aviatorblue\Documents\Senior Project\Electrical_Design\Amplifier_Design\Rev 2.0\amplifier_setup_rev2.asc
+Circuit: * Z:\Users\aviatorblue\Documents\Senior Project\Electrical_Design\Amplifier_Design\Rev_2.0\amplifier_setup_rev2.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -255,24 +255,23 @@ Source Step = 99.8077%
 Source Step = 99.9341%
 Source stepping succeeded in finding the operating point.
 
-Heightened Def Con from 4.96155 to 4.96155
 
-Date: Tue Mar 15 11:40:02 2016
-Total elapsed time: 68.123 seconds.
+Date: Fri Mar 18 13:33:49 2016
+Total elapsed time: 32.403 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 634331
-traniter = 520142
-tranpoints = 258741
-accept = 222627
-rejected = 36115
+totiter = 219074
+traniter = 104885
+tranpoints = 52235
+accept = 44955
+rejected = 7280
 matrix size = 62
 fillins = 58
 solver = Normal
-Thread vector: 69.0/45.9[4] 19.3/13.2[4] 9.0/13.2[1] 0.8/6.2[1]  2592/500
-Matrix Compiler1: 6.67 KB object code size  3.4/1.7/[1.2]
-Matrix Compiler2: 7.63 KB object code size  2.0/3.4/[1.7]
+Thread vector: 51.1/31.6[4] 23.0/21.2[1] 9.6/12.6[1] 0.6/3.2[1]  2592/500
+Matrix Compiler1: 6.67 KB object code size  3.7/2.1/[1.2]
+Matrix Compiler2: 7.63 KB object code size  2.0/2.4/[1.4]
 
 

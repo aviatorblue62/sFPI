@@ -1,6 +1,4 @@
-% arara: pdflatex
 % arara: bibtex
-% arara: pdflatex
 \documentclass[12pt,journal]{IEEEtran}			
 \usepackage{array,
 			booktabs,
@@ -150,7 +148,7 @@ basicstyle=\scriptsize
 %-----------------------------------------------------------------------------------------------------------------------------------
 \begin{abstract}
 
-A scanning mirror Fabry-Perot Interferometer (sFPI) was designed, built, and implemented to measure the modes of a laser beam. It has an estimated finesse of 155 and free spectral range of 3.75 GHz with a resolution bandwidth of 24 MHz. A piezoelectric device will change the spacing of the mirrors, allowing scanning across multiple free spectral ranges. A voltage-source driver provides a controllable signal to a piezoelectric device. The spectral frequency content will be captured by a photo-detector and amplified by a trans-impedance amplifier. This can be analyzed one of two ways. Either sent to a micro-controller-computer pair which processes, displays, and stores this data locally on a hard disk, or sampled by an oscilloscope which can take the place of the micro-controller.
+A scanning mirror Fabry-Perot Interferometer (sFPI) was designed, built, and implemented to measure the modes of a laser beam. It has an estimated finesse of 522 and free spectral range of 3.75 GHz with a resolution bandwidth of 24 MHz. A piezoelectric device will change the spacing of the mirrors, allowing scanning across multiple free spectral ranges. A voltage-source driver provides a controllable signal to a piezoelectric device. The spectral frequency content will be captured by a photo-detector and amplified by a trans-impedance amplifier. This can be analyzed one of two ways. Either sent to a micro-controller-computer pair which processes, displays, and stores this data locally on a hard disk, or sampled by an oscilloscope which can take the place of the micro-controller.
 
 \end{abstract}
 %-----------------------------------------------------------------------------------------------------------------------------------
@@ -368,7 +366,7 @@ The photodiode is mounted on the back of the adjustable mounts by the specially 
 \begin{figure*}[tb]
   \centering
 	\includegraphics[width=6in]{/ltspice/amplifier-circuit-design-ltspice.png}
-	\caption[Cavity Mounts]{The three-stage negative feedback amplifier configuration provides a range of 0.2 V/V up to 7.716 V/V of amplification to the input signal by changing resistors R3 and R5 from $3.6\;k\Omega$ to $10\;k\Omega$. $V_{DD}$ and $V_{SS}$ are the respective positive and negative voltage rails +17V and -17V. For more clarification the full LTSpice model is Figure~\ref{ltspice:driver} in Section~\ref{ss:ltpsice-models}}
+	\caption{The three-stage negative feedback amplifier configuration provides a range of 0.5 V/V up to 9 V/V of amplification to the input signal by changing resistors R3 and R5 from $3.3\;k\Omega$ to $10\;k\Omega$ and R1 from $10\;k\Omega$ to $100\;k\Omega$. $V_{DD}$ and $V_{SS}$ are the respective positive and negative voltage rails +17V and -17V.}
 	\label{fig:amplifier-configuration}
 \end{figure*}
 %-----------------------------------------------------------------------------------------------------------------------------------
@@ -413,11 +411,11 @@ The micro-controller for the driver setup is constructed using an Arduino UNO (s
 \begin{figure}
 	\centering
 	\includegraphics[width=3in]{./Function_generator.png}
-	\caption{Function generator design}
+	\caption{Function generator design with ATMEGA chip and MCP4725 DAC}
 	\label{fig:function-generator}
 \end{figure}
 
-The DAC attenuates the +5V 10\% voltage supply from the Arduino UNO with $2^{12}$ individual output values. A peak-to-peak sawtooth voltage signal is the result, with a bit resolution of 1.2 mV/bit at a frequency of 2.5 Hz (see Figure~\ref{fig:five-volts-15-hz-wave}). The MCP4725 signal-generator acts as a near-perfect voltage source with a series impedance of $1\Omega$ when in normal operations. This will not affect input resistances for the analog design.  
+The DAC attenuates the $+5V \pm 10\%$ voltage supply from the Arduino UNO with $2^{12}$ individual output values. A peak-to-peak sawtooth voltage signal is the result, with a bit resolution of 1.2 mV/bit at a frequency of 2.5 Hz (see Figure~\ref{fig:five-volts-15-hz-wave}). However, due to the speed of the output of the DAC, 10 kHz, there is a substantial amount of noise which is filtered out in the next stage of the driver. The MCP4725 signal-generator acts as a near-perfect voltage source with a series impedance of $1\Omega$ when in normal operations. This will not affect input resistances for the analog design.  
 
 \begin{figure}[h!]
   \centering
@@ -452,7 +450,7 @@ This is sourced to a buffer which uses a single LT1006 (see Datasheet on page~\p
 	\label{fig:buffer}
 \end{figure}  
 
-To change the offset biasing of the sawtooth voltage signal an NTE957 (see Datasheet on page~\pageref{datasheet:nte957}) adjustable DC voltage regulator is added using a summation circuit to the AC signal with the following configuration (Figure~\ref{fig:dc-adj-voltage}).
+To change the offset biasing of the sawtooth voltage signal a LT3080 (see Datasheet on page~\pageref{datasheet:lt3080}) adjustable DC voltage regulator is added using a summation circuit to the AC signal with the following configuration (Figure~\ref{fig:dc-adj-voltage}).
 
 %---------------------
 % Power Distribution
@@ -460,7 +458,7 @@ To change the offset biasing of the sawtooth voltage signal an NTE957 (see Datas
 
 \subsection{Power Distribution}
 
-A VELLEMAN PSINO2512N 12-VOLT 25-WATT DC SWITCHING POWER SUPPLY (see Datasheet on page~\pageref{datasheet:psino2512n}) was complimented with a DROK Micro Electric DC/DC Boost Converter LM2577 Step-up Voltage Transformer (see Datasheet on page~\pageref{datasheet:drok} for specifications of the DROK component and on page~\pageref{datasheet:lm2577} for the LM2577 data sheet) to provide the power to the system. A LT1129 5 VDC $\pm 1\%$ fixed voltage regulator (see Datasheet on page~\pageref{datasheet:nte941m}) and an MAX737 inverting buck-boost converter (see Datasheet on page~\pageref{datasheet:max737}). 
+A VELLEMAN PSINO2512N 12-VOLT 25-WATT DC SWITCHING POWER SUPPLY (see Datasheet on page~\pageref{datasheet:psino2512n}) was complimented with a DROK Micro Electric DC/DC Boost Converter LM2577 Step-up Voltage Transformer (see Datasheet on page~\pageref{datasheet:lm2577}) to provide the power to the system. A LT1129 5 VDC $\pm 1\%$ fixed voltage regulator (see Datasheet on page~\pageref{datasheet:lt1129}) and an MAX737 inverting buck-boost converter (see Datasheet on page~\pageref{datasheet:max635}). 
 
 The 12VDC PSIN02512N voltage supply is sourced to LM2577, boosting the voltage to 17 VDC. The 17 VDC is sourced to the LT1129 5-VDC producing +5 volts suppling power to the boot-loaded Arduino and the MCP4725 DAC. 
 
@@ -469,11 +467,11 @@ Since the design calls for a signal with a max peak-to-peak voltage of approxima
 \begin{figure*}[tb]
   \centering
 	\includegraphics[width=6in]{/ltspice/power-supply-circuit-desgin-ltspice.png}
-	\caption[Cavity Mounts]{The three-stage negative feedback amplifier configuration provides a range of 0.2 V/V up to 7.716 V/V of amplification to the input signal by changing resistors R3 and R5 from $3.6\;k\Omega$ to $10\;k\Omega$. $V_{DD}$ and $V_{SS}$ are the respective positive and negative voltage rails +17V and -17V. For more clarification the full LTSpice model is Figure~\ref{ltspice:driver} in Section~\ref{ss:ltpsice-models}}
+	\caption{This power supply setup allows for supplying the 17V rails necessary for the operational amplifiers as well as a 5V supply for the micro-controllers being used.}
 	\label{fig:amplifier-configuration}
 \end{figure*}
 
-The current design of the board, which will be discussed later in this section, was simulated in LTspice for power consumption calculations. The negative power supply was sinking 22.69 mA of current. In order to calculated the range of inductance and capacitance necessary for operations Eqs~\ref{eq:ipk} and~\ref{eq:l} were used. 
+The current design of the board, which will be discussed later in this section, was simulated in LTspice for power consumption calculations. The total load of the system is simulated to be less than 30 mA. The current devices are rated well above this value, so loading issues should not be preset. The negative power supply was sinking 22.69 mA of current. In order to calculated the range of inductance and capacitance necessary for operations Eqs~\ref{eq:ipk} and~\ref{eq:l} were used. 
 
 \begin{equation}
 L_{min} = \frac{(1-D)^2 * R_{min}}{2*f}
@@ -513,7 +511,7 @@ Given the ranges for reflectivity given above, that $T = 1-R$, and $P_{in} = 3 m
 \begin{figure*}
 	\centering
 	\includegraphics[width=\textwidth]{./transimpedance_amp_design.png}
-	\caption{Transimpedance amplifier design}
+	\caption{Trans-impedance amplifier design}
 	\label{fig{transimpedance-amp}}
 \end{figure*}
 
@@ -541,21 +539,34 @@ The voltage signal from the TAV is sampled by the Arduino Uno, as discussed in S
 
 \subsection{Data Analysis}
 
-This data will be combined in conjunction with the 5V sawtooth signal to plot the photodiode signal as a function of the geometrical change of the resonant cavity, which is proportional to the wavelength of the light. This will be done via a GUI model with a language that possesses the capability for universal interfacing. Python will be the base model for programming; however, other languages will be tested for user interface and compared based on speed, cross-platform configuration, and simplicity.
+This data will be combined in conjunction with the 5V sawtooth signal to plot the photodiode signal as a function of the geometrical change of the resonant cavity, which is proportional to the wavelength of the light. This will be done via a GUI model with a language that possesses the capability for universal interfacing. The current construct model is in Python and adequately provides a way to sample, view and store the data.
 
 % Discussion and Conclusion
 %-----------------------------------------------------------------------------------------------------------------------------------
 
 \section{Discussion and Conclusion}
 
- While the project in whole was not finished, the crucial parts of the design were completed as well as the optical and mechanical construction of the cavity and the sFPI driver. The resonant cavity was successfully integrated with mechanical design using adjustable mounting brackets and CNCed aluminum based and 3D printed parts. This allowed the user to align or misalign the cavity as desired. The mirrors can be separated from $18 \text{mm to} 50 \text{mm} \pm 3 \text{mm}$. The construction of the sFPI driver was successful on the second iteration of the design. The result being a sawtooth waveform output with amplitude ranging from $500 \text{mV} to 32 \text{V}$ and a DC offset ranging from $0 \text{to} 32 \text{V} \pm 2 \text{V}$. The third design iteration was not constructed, but the design was complete. It eliminated noise issues by creating a bandpass filter of the system.   
+While the project in whole was not finished, the crucial parts of the design were completed as well as the optical and mechanical construction of the cavity and the sFPI driver. The resonant cavity was successfully integrated with mechanical design using adjustable mounting brackets and CNCed aluminum based and 3D printed parts. This allowed the user to align or misalign the cavity as desired. The mirror's separation can be modified to fit different parameter constraints. 
+
+The construction of the sFPI driver was successful on the second iteration of the design. This iteration produced a sawtooth waveform output with amplitude ranging from 5V to 15V and a DC offset range of 0 to 28V (see Figures on page~\pageref{ss:output-signal-graphs}). While the first design did not meet the design parameters of the project, it created a stepping stone which further enhanced the finalized the design. The finalized design was simulated in LTSpice and produced the following output based on the best interpretation input of the DAC outputted. This re-design increases the amplitude range to 0.5V to 32V and the DC offset range from -17V to 17V (see Figures on page~\pageref{subss:final-design-output})\footnote{The reason that the DC offset changed from a low of 0 to -17V was the way the previous iteration was put together and tested. The output was connected across the Vout and the V-, which is the reason a range from 0 to 28V was seen.}. It eliminated noise issues by creating a bandpass filter of the system as can be seen in the output of the LTSpice simulation.  
+
+The trans-impedance amplifier system was not successfully constructed; however, the design and simulation was completed. The first two designs had the wrong bandpass filtering system as well as an incorrect overall closed loop gain. This was due to inaccurate measurements of the photodiode current when light was incident upon it. The final design takes into account a range of photodiode currents from 0 to 4 nA as well as a filtering system which passes through frequencies in the range 6Hz to 400Hz. This eliminates the majority of unwanted noise in the system. The design was also based around the Arduino UNO's digital filtering because of the slow sampling rate of the ADC (see Figures on page~\pageref{subss:trans-amp-output}).
+
+The GUI application was designed; however, the algorithm for auto calibration is still incomplete. The GUI allows the user to select which serial port to use (cross platform compatible), calibrate the current input, as well the ability to start and stop taking data (see Figures on page~\pageref{subss:GUI}).   
+
+% Discussion and Conclusion
+%-----------------------------------------------------------------------------------------------------------------------------------
+
+\section{Moving Forward}
+
+In order to improve on the design, the sFPI driver could be tuned better in the frequency spectrum to produce a more polished signal. The trans-impedance amplifier and Arduino UNO sampling device need more work with syncing with the function generator as well as also producing a more polished signal. The GUI could be developed in a better platform (i.e. C++) and modeled to fit a Windows environment instead of a Apple. The mechanical design could be improved by having a micrometer base for precise knowledge of the distance between the two mirrors. Also by adding in a lens holder which is aligned with the first mirror would make aligning the cavity easier and quicker. The schematics still need to be finished in their design and creation. I used Eagle to create what is currently on the git repository; however, more accurate design for PCB development is needed. 
 
 % Acknowledgments
 %-----------------------------------------------------------------------------------------------------------------------------------
 
 \section{Acknowledgments}
 
-I could not have had the success I did without the help of my professors' and academic colleges. Thanks go out to Dr. Scott Prahl for mentoring me on this project as well as suggesting the idea to me. I would like to thank the Optoelectronics program at OIT for making this project possible by providing all of the necessary parts that I needed for prototyping and construction. Thanks to Brandon Clarno for providing me with precision milling of the designs I provided him. He was instrumental in bringing the aluminum base to life as well as the first iteration of the piezo-mirror holder milled out of PVC plastic. Thanks go out to Caleb Schlamp for moral support and advisement of the electrical design. Thanks to Frank Rykoten and Neils Williams for helping me construct 
+I could not have had the success I did without the help of my professors' and academic colleges. Thanks go out to Dr. Scott Prahl for mentoring me on this project as well as suggesting the idea to me. I would like to thank the Optoelectronics program at OIT for making this project possible by providing all of the necessary parts that I needed for prototyping and construction. Thanks to Brandon Clarno for providing me with precision milling of the designs I provided him. He was instrumental in bringing the aluminum base to life as well as the first iteration of the piezo-mirror holder milled out of PVC plastic. Thanks go out to Caleb Schlamp for moral support and advisement of the electrical design. Thanks to Frank Rykoten and Neils Williams for helping me construct a theoretically feasible power supply to power my design. 
 
 % References
 %-----------------------------------------------------------------------------------------------------------------------------------
@@ -567,7 +578,194 @@ I could not have had the success I did without the help of my professors' and ac
 \begin{appendices}
 \onecolumn
 
+
+% Output Signal Graphs
+%-----------------------------------------------------------------------------------------------------------------------------------
+
+\section{Data and Results} 
+
+%---------------------------
+% sFPI Driver - 2nd Design Iteration Output
+%---------------------------
+\subsection{sFPI Driver - 2nd Design Iteration Output} \label{ss:output-signal-graphs}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./data/max_amp_due_to_rails.png}
+	\caption{With amplification at a maximum, the amplitude of the waveform was only able to reach 15Vpp. While is will work, it was only half of the desired range. The redesign, which still needs to be tested will produce a waveform with a range of 32V instead of 15V.}
+	\label{fig:max-amp-2nd-iteration}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./data/dc_max_ramp.png}
+	\caption{With the voltage regulator adding the maximum amount of DC voltage to the signal, the DC offset of the signal is 28V.}
+	\label{fig:max-dc-offset}
+\end{figure}
+\newpage
+
+%------------------------------------------------------
+% sFPI Driver - Final Design Iteration LTSpice Output
+%------------------------------------------------------
+\subsection{sFPI Driver - Final Design Iteration LTSpice Output} \label{subss:final-design-output}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./ltspice/max-amplification.png}
+	\caption{The final design allowed for an amplitude of the signal to reach 32Vpp.}
+	\label{fig:max-amp-final-iteration}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./ltspice/min-amplification.png}
+	\caption{The final design allowed for an amplitude of the signal to go as low as 500mVpp}
+	\label{fig:min-amp-final-iteration}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./ltspice/fft-amplification.png}
+	\caption{This eliminated most unnecessary noise in the system}
+	\label{fig:fft-final-iteration}
+\end{figure}
+\newpage
+
+%---------------------------------------------------------------------------
+% sFPI Transimpedance Amplifier - Final Design Iteration LTSpice Output
+%---------------------------------------------------------------------------
+\subsection{sFPI Trans impedance Amplifier - Final Design Iteration LTSpice Output} \label{subss:trans-amp-output}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./ltspice/transimpedance-amp-output.png}
+	\caption{The final design allows for the sampling of the spectral frequency content of the sFPI cavity.}
+	\label{fig:trans-amp-output}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./ltspice/transimpedance-amp-bandpass.png}
+	\caption{The final design allows for the sampling of the spectral frequency content of the sFPI cavity eliminating noise.}
+	\label{fig:trans-amp-fft}
+\end{figure}
+\newpage
+
+%---------------------------------------------------------------------------
+% sFPI GUI - Final Design Iteration Application
+%---------------------------------------------------------------------------
+\subsection{sFPI GUI - Final Design Iteration Application} \label{subss:GUI}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./GUI/main-screen.png}
+	\caption{The GUI design allows the user to view the data live on the screen as it is sampled from the Arduino UNO.}
+	\label{fig:GUI-main-screen}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./GUI/serial-port.png}
+	\caption{This allows the user to change the serial port they want to use to collect the data from.}
+	\label{fig:GUI-serial-port}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./GUI/calibrate.png}
+	\caption{This allows the user to calibrate the system based on the input from the Ardunio UNO.}
+	\label{fig:GUI-calibrate}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./GUI/menu-bar.png}
+	\caption{The menu bar allows the user to pick from a select list of functions and operations to utilize on the data.}
+	\label{fig:GUI-menu-bar}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./GUI/tools.png}
+	\caption{This is the only menu bar that has been developed for use.}
+	\label{fig:GUI-tools}
+\end{figure}
+
+\newpage
+
+
+% Software Programs
+%-----------------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------
+% Arduino Programs
+%---------------------------
+\section{Arduino Programs}
+
+\subsection{Writing to the MCP4725 12-bit DAC via I2C}
+
+\arduinoexternal{../App/Arduino/sFPI-driver/sFPI-driver.ino}
+
+\subsection{Program for capturing and sending serial data to the computer} \label{serial-data}
+
+\arduinoexternal{../App/Arduino/Serial-data/Serial-data.ino}
+
+
+%---------------------------
+% Python Programs
+%---------------------------
+\section{Python GUI}
+
+\subsection{Main program}
+\pythonexternal{../App/GUI.py}
+
+\subsection{Application Class}
+\pythonexternal{../App/Application.py}
+
+\subsection{USB Interface Class}
+\pythonexternal{../App/USBInterface.py}
+
+\subsection{GUI Errors Class}
+\pythonexternal{../App/GUIErrors.py}
+
+\subsection{Setup Function}
+\pythonexternal{../App/setup.py}
+
+\newpage
+
+
+%---------------------------
+% LTSpice Programs
+%---------------------------
+\section{LTSpice Netlists}
+
+\subsection{Interferometer Driver LTSpice Netlist for Simulation}
+\ltspiceexternal{../Electrical_Design/Amplifier_Design/Rev_2.0/amplifier_setup_rev2.txt}
+\newpage
+
+\subsection{Interferometer Trans-impedance Amplifier LTSpice Netlist for Simulation}
+\ltspiceexternal{../Electrical_Design/Photodiode_Amplifier/transimpedance_amplifier.txt}
+
+\newpage
+
+
+% Mechanical Assembly Drawings
+%-----------------------------------------------------------------------------------------------------------------------------------
+
 \section{Mechanical Assembly Drawings}
+
+
+%---------------------------
+% PZT-Mirror Holder
+%---------------------------
 \subsection{PZT-Mirror Holder}
 
 \begin{figure}[h!]
@@ -593,6 +791,9 @@ I could not have had the success I did without the help of my professors' and ac
 
 \newpage
 
+%---------------------------
+% Aluminum Base
+%---------------------------
 \subsection{sFPI Aluminum Base} \label{ss:sfpilensholder}
 
 \begin{figure}[h!]
@@ -625,6 +826,9 @@ I could not have had the success I did without the help of my professors' and ac
 
 \newpage
 
+%---------------------------
+% Photodiode Holder
+%---------------------------
 \subsection{Photodiode Holder} \label{ss:diode_holder}
 
 \begin{figure}[h!]
@@ -661,58 +865,45 @@ I could not have had the success I did without the help of my professors' and ac
 	\caption[Cavity Mounts]{The back cross section view and measurements of the sFPI aluminum base}
 	\label{fig:diode_holder-side}
 \end{figure}   
+
 \newpage
 
-\section{Arduino Programs}
-\subsection{Writing to the MCP4725 12-bit DAC via I2C}
-\arduinoexternal{../App/Arduino/sFPI-driver/sFPI-driver.ino}
+%---------------------------
+% Photodiode Holder
+%---------------------------
+\subsection{Photodiode Holder} \label{ss:schematics}
 
-\subsection{Program for capturing and sending serial data to the computer} \label{serial-data}
-\arduinoexternal{../App/Arduino/Serial-data/Serial-data.ino}
 
-\section{Python GUI}
-
-\subsection{Main program}
-\pythonexternal{../App/GUI.py}
-
-\subsection{Application Class}
-\pythonexternal{../App/Application.py}
-
-\subsection{USB Interface Class}
-\pythonexternal{../App/USBInterface.py}
-
-\subsection{GUI Errors Class}
-\pythonexternal{../App/GUIErrors.py}
-
-\subsection{Setup Function}
-\pythonexternal{../App/setup.py}
-\newpage
-
-\section{LTSpice Netlists}
-\subsection{Interferometer Driver LTSpice Netlist for Simulation}
-\ltspiceexternal{../Electrical_Design/Amplifier_Design/Rev_2.0/amplifier_setup_rev2.txt}
-\newpage
+% Datasheets
+%-----------------------------------------------------------------------------------------------------------------------------------
 
 \section{Datasheets}
 
-\includepdf[pages=1-15]{../Datasheets/ATmega328.pdf}
+% ATMega 328P
+\includepdf[pages=1-15]{../Datasheets/ATmega328.pdf} \label{datasheet:atmega328p}
 
-\includepdf[pages=1-15]{../Datasheets/LT3080.pdf}
+% LT3080
+\includepdf[pages=1-15]{../Datasheets/LT3080.pdf} \label{datasheet:lt3080}
 
-\includepdf[pages=1-15]{../Datasheets/LT1129-5.pdf}
+% LT1129-5
+\includepdf[pages=1-15]{../Datasheets/LT1129-5.pdf} \label{datasheet:lt1129}
 
-\includepdf[pages=-]{../Datasheets/MAX635.pdf}
+% MAX635
+\includepdf[pages=-]{../Datasheets/MAX635.pdf} \label{datasheet:max635}
 
-\includepdf[pages=-]{../Datasheets/LT1006.pdf} \label{datasheet:nte941m}
+% LT1006
+\includepdf[pages=-]{../Datasheets/LT1006.pdf} \label{datasheet:lt1006}
 
-\includepdf[pages=-]{../Datasheets/nte957.pdf} \label{datasheet:nte957}
-
+% MCP4725
 \includepdf[pages={1,3-5,13,15-17}]{../Datasheets/mcp4725.pdf} \label{datasheet:mcp4725}
 
+% Arduino UNO
 \includepdf[pages=-]{../Datasheets/arduino_uno.pdf} \label{datasheet:arduino_uno}
 
+% PSIN02512N
 \includepdf[pages=-]{../Datasheets/PSIN02512N.pdf} \label{datasheet:psin02512n}
 
+% AD8627
 \includepdf[pages=-]{../Datasheets/AD8672.pdf} \label{datasheet:ad8627}
 
 \end{appendices}
